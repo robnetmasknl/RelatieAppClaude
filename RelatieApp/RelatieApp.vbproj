@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17938E9C-6786-4161-A5C3-93470BA82182}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RelatieApp.My.MyApplication</StartupObject>
+    <RootNamespace>RelatieApp</RootNamespace>
+    <AssemblyName>RelatieApp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RelatieApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RelatieApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GvS.Controls.HtmlTextbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BusinessObjects\bin\Debug\GvS.Controls.HtmlTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CalendarColumn.vb" />
+    <Compile Include="dlgDragDrop.Designer.vb">
+      <DependentUpon>dlgDragDrop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgDragDrop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgIbbReports.Designer.vb">
+      <DependentUpon>dlgIbbReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgIbbReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdCentralBoard.Designer.vb">
+      <DependentUpon>dlgJdCentralBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdCentralBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdTypeClaim.Designer.vb">
+      <DependentUpon>dlgJdTypeClaim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdTypeClaim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdTypeComplaint.Designer.vb">
+      <DependentUpon>dlgJdTypeComplaint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdTypeComplaint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdTypeCourt.Designer.vb">
+      <DependentUpon>dlgJdTypeCourt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdTypeCourt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgAskIt.Designer.vb">
+      <DependentUpon>dlgAskIt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgAskIt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgDocumentUpload.Designer.vb">
+      <DependentUpon>dlgDocumentUpload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgDocumentUpload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdPhase.Designer.vb">
+      <DependentUpon>dlgJdPhase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdPhase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdTypeObjection.Designer.vb">
+      <DependentUpon>dlgJdTypeObjection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdTypeObjection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdTypePetition.Designer.vb">
+      <DependentUpon>dlgJdTypePetition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdTypePetition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdTypeVnV.Designer.vb">
+      <DependentUpon>dlgJdTypeVnV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdTypeVnV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLegenda.Designer.vb">
+      <DependentUpon>dlgLegenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgLegenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgSaveYesNo.Designer.vb">
+      <DependentUpon>dlgSaveYesNo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgSaveYesNo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgSqlMailing.Designer.vb">
+      <DependentUpon>dlgSqlMailing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgSqlMailing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgStorno.Designer.vb">
+      <DependentUpon>dlgStorno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgStorno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgJdTypeOnbudsman.Designer.vb">
+      <DependentUpon>dlgJdTypeOnbudsman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgJdTypeOnbudsman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnpvProcess.Designer.vb">
+      <DependentUpon>frmAnpvProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnpvProcess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmailing.Designer.vb">
+      <DependentUpon>frmEmailing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmailing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABPProcess.Designer.vb">
+      <DependentUpon>frmABPProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmABPProcess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgDate.Designer.vb">
+      <DependentUpon>dlgDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgDocSave.Designer.vb">
+      <DependentUpon>dlgDocSave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgDocSave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgFunctie.Designer.vb">
+      <DependentUpon>dlgFunctie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgFunctie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgFunctieMaintenance.Designer.vb">
+      <DependentUpon>dlgFunctieMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgFunctieMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgInstance.Designer.vb">
+      <DependentUpon>dlgInstance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgInstance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgLidSoort.Designer.vb">
+      <DependentUpon>dlgLidSoort.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgLidSoort.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgOpzegging.Designer.vb">
+      <DependentUpon>dlgOpzegging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgOpzegging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgSettings.Designer.vb">
+      <DependentUpon>dlgSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddressFile.Designer.vb">
+      <DependentUpon>frmAddressFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddressFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSEPA.Designer.vb">
+      <DependentUpon>frmSEPA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSEPA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmail.Designer.vb">
+      <DependentUpon>frmEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEWS.Designer.vb">
+      <DependentUpon>frmEWS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEWS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistory.Designer.vb">
+      <DependentUpon>frmHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIBBDossier.Designer.vb">
+      <DependentUpon>frmIBBDossier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIBBDossier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIBBDossierSearchSmall.Designer.vb">
+      <DependentUpon>frmIBBDossierSearchSmall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIBBDossierSearchSmall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIBBMain.Designer.vb">
+      <DependentUpon>frmIBBMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIBBMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaved.Designer.vb">
+      <DependentUpon>frmSaved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchDocuments.Designer.vb">
+      <DependentUpon>frmSearchDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchDocuments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInOuFlow.Designer.vb">
+      <DependentUpon>frmInOuFlow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInOuFlow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMailing.Designer.vb">
+      <DependentUpon>frmMailing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMailing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaintenanceTemplates.Designer.vb">
+      <DependentUpon>frmMaintenanceTemplates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaintenanceTemplates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNSKProcess.Designer.vb">
+      <DependentUpon>frmNSKProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNSKProcess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOverleden.Designer.vb">
+      <DependentUpon>frmOverleden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOverleden.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatieSearch.Designer.vb">
+      <DependentUpon>frmRelatieSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatieSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatie.Designer.vb">
+      <DependentUpon>frmRelatie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSqlBuild.Designer.vb">
+      <DependentUpon>frmSqlBuild.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSqlBuild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWait.Designer.vb">
+      <DependentUpon>frmWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceStd.Designer.vb">
+      <DependentUpon>MaintenanceStd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceStd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mGeneral.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resource1.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="uctd.Designer.vb">
+      <DependentUpon>uctd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uctd.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTextDate.Designer.vb">
+      <DependentUpon>ucTextDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucTextDate.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uLabel.Designer.vb">
+      <DependentUpon>uLabel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uLabel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uZittingDetails.Designer.vb">
+      <DependentUpon>uZittingDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uZittingDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgDragDrop.resx">
+      <DependentUpon>dlgDragDrop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgIbbReports.resx">
+      <DependentUpon>dlgIbbReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdCentralBoard.resx">
+      <DependentUpon>dlgJdCentralBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdTypeClaim.resx">
+      <DependentUpon>dlgJdTypeClaim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdTypeComplaint.resx">
+      <DependentUpon>dlgJdTypeComplaint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdTypeCourt.resx">
+      <DependentUpon>dlgJdTypeCourt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgAskIt.resx">
+      <DependentUpon>dlgAskIt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgDocumentUpload.resx">
+      <DependentUpon>dlgDocumentUpload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdPhase.resx">
+      <DependentUpon>dlgJdPhase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdTypeObjection.resx">
+      <DependentUpon>dlgJdTypeObjection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdTypePetition.resx">
+      <DependentUpon>dlgJdTypePetition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdTypeVnV.resx">
+      <DependentUpon>dlgJdTypeVnV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLegenda.resx">
+      <DependentUpon>dlgLegenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgSaveYesNo.resx">
+      <DependentUpon>dlgSaveYesNo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgSqlMailing.resx">
+      <DependentUpon>dlgSqlMailing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgStorno.resx">
+      <DependentUpon>dlgStorno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgJdTypeOnbudsman.resx">
+      <DependentUpon>dlgJdTypeOnbudsman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnpvProcess.resx">
+      <DependentUpon>frmAnpvProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmailing.resx">
+      <DependentUpon>frmEmailing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmABPProcess.resx">
+      <DependentUpon>frmABPProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgDate.resx">
+      <DependentUpon>dlgDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgDocSave.resx">
+      <DependentUpon>dlgDocSave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgFunctie.resx">
+      <DependentUpon>dlgFunctie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgFunctieMaintenance.resx">
+      <DependentUpon>dlgFunctieMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgInstance.resx">
+      <DependentUpon>dlgInstance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLidSoort.resx">
+      <DependentUpon>dlgLidSoort.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgOpzegging.resx">
+      <DependentUpon>dlgOpzegging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgSettings.resx">
+      <DependentUpon>dlgSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddressFile.resx">
+      <DependentUpon>frmAddressFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSEPA.resx">
+      <DependentUpon>frmSEPA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmail.resx">
+      <DependentUpon>frmEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEWS.resx">
+      <DependentUpon>frmEWS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistory.resx">
+      <DependentUpon>frmHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIBBDossier.resx">
+      <DependentUpon>frmIBBDossier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIBBDossierSearchSmall.resx">
+      <DependentUpon>frmIBBDossierSearchSmall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIBBMain.resx">
+      <DependentUpon>frmIBBMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaved.resx">
+      <DependentUpon>frmSaved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchDocuments.resx">
+      <DependentUpon>frmSearchDocuments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInOuFlow.resx">
+      <DependentUpon>frmInOuFlow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMailing.resx">
+      <DependentUpon>frmMailing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaintenanceTemplates.resx">
+      <DependentUpon>frmMaintenanceTemplates.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNSKProcess.resx">
+      <DependentUpon>frmNSKProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOverleden.resx">
+      <DependentUpon>frmOverleden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatieSearch.resx">
+      <DependentUpon>frmRelatieSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatie.resx">
+      <DependentUpon>frmRelatie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSqlBuild.resx">
+      <DependentUpon>frmSqlBuild.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWait.resx">
+      <DependentUpon>frmWait.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceStd.resx">
+      <DependentUpon>MaintenanceStd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctd.resx">
+      <DependentUpon>uctd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTextDate.resx">
+      <DependentUpon>ucTextDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uZittingDetails.resx">
+      <DependentUpon>uZittingDetails.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.vbproj">
+      <Project>{F320F453-23EC-4706-9414-03ADC097B574}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MapiObjects\MapiObjects.vbproj">
+      <Project>{7a589b82-a2a8-46c7-81b8-38f8bdec3f32}</Project>
+      <Name>MapiObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OfficeObjects\OfficeObjects.vbproj">
+      <Project>{693F86B7-1F27-424F-AAAB-AAADE9A1DD52}</Project>
+      <Name>OfficeObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\calendar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_word.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_new.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Word.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\logo_small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.jpg" />
+    <None Include="Resources\VBMNOV.config" />
+    <None Include="Resources\back2.ico" />
+    <None Include="Resources\front1.ico" />
+    <None Include="Resources\Arrow.png" />
+    <None Include="Resources\Arrow-back.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Microsoft Outlook1.png" />
+    <None Include="Resources\Microsoft-Outlook-32.png" />
+    <None Include="Resources\outlook_256x256x32.png" />
+    <None Include="Resources\outlook.png" />
+    <None Include="Resources\Copy of outlook.png" />
+    <None Include="Resources\help.ico" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\Questions.png" />
+    <None Include="Resources\Question32.png" />
+    <None Include="Resources\Question321.png" />
+    <None Include="Resources\Question-32.png" />
+    <None Include="Resources\ok1.ico" />
+    <None Include="Resources\yes.ico" />
+    <Content Include="ToDo.txt" />
+    <Content Include="Updates.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,27 @@
+﻿
+•	Als we een nieuw lid hebben ingevoerd en naar ‘t contributieveld gaan, kunnen we hier niet gelijk een nieuwe lidsoort toekennen. 
+		Wij moeten dit afsluiten en saven, helemaal opnieuw oproepen en dan pas kunnen we in het contributieveld muteren. 
+		Waarom kan dit niet gelijk??? Mogelijk maken s.v.p.!!!
+	-	Hier zien we ook een oude datum instaan: sedert 01-02-2006 komt iedere keer terug, 
+		deze datum verwijderen en inzetten datum van heden (dus van invoeren)
+		
+•	Correspondentie veld:
+	-	wij hebben gisteren een brief samengevoegd voor een nieuw lid, deze handelingen slaat hij iedere keer op, m.a.w. de brieven 
+		hebben wij niet nodig voor onze administratie, het waren ‘speelbrieven’ en zijn NIET verstuurd. Deze graag verwijderen, staat in record S.F.S. Romp. In de toekomst kan dit ook handig zijn, stel je voor: ik pak een verkeerde brief en ga daarna de juiste pakken.
+
+•	In veld Wijzigingen: wat valt er hier te wijzigen?? Dit graag uitleggen als je er bent.
+
+•	Moeten wij voor de NSK verwerking weer in het aparte bestand zetten, welke Cor weer doorstuurt?? Of kan dit nieuwe systeem al vanzelf doen??
+
+•	Hoe we straks tellingen maken uit een query??? 
+
+•	Lidsoort s.v.p. nog uitwerken (zie bijgaand voorbeeld)
+
+•	Bij Instantie > bovenaan NSK, dan BANK etc. 
+	Wat wordt dan de volgorde van etc?
+	
+•	Rechts naast instantie bij ‘sinds’ > komt hier de datum dat NSK gaat opstarten of anders?
+•	Graag een extra veld bijv. onder aantal XR-cise voor BOT, BBT, burger en PA 
+
+
+•	Bij invoeren nieuwe leden moet huisnummer leeg staan (staat nu op 0)

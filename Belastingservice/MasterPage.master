@@ -1,0 +1,131 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head id="Head1" runat="server">
+        <title>Welkom op de belastingservice site van de VBM</title>
+        <link href="belasting.css" rel="stylesheet" type="text/css" />
+    	<style type="text/css">
+
+.auto-style2 {
+text-align: left;
+margin-left: 40px;
+}
+.auto-style1 {
+	background-color: #008080;
+}
+		.auto-style4 {
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+.auto-style5 {
+    text-align: center;
+	background-color: #DEE5EF;
+}
+
+.auto-style6 {
+	background-color: #DEF1F3;
+}
+.auto-style7 {
+	color: #FFFFFF;
+}
+		.auto-style8 {
+	margin-left: 40px;
+}
+.centerTable { margin: 0px auto; }
+
+		</style>
+
+    	<script type="text/javascript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+
+function FP_swapImgRestore() {//v1.0
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } } 
+  doc.$imgSwaps=null; }
+}
+// -->
+</script>
+    </head>
+    <body onload="FP_preloadImgs(/*url*/'Images/lidmaatschapnummerzoeken-swap.jpg',/*url*/'Images/aanmelden-swap.jpg')" background="Images/achtergrond.jpg" style="background-position:center; background-repeat:no-repeat; background-attachment: fixed;">
+        <form id="form1" runat="server">
+                          <table border="0" cellpadding="0" cellspacing="0" class="contentpane" align="center" style="width: 838px">
+                    <tr>
+	                    <td colspan="4" align="center" >
+	                        &nbsp;</td>
+	                  </tr>
+	                  </table>
+	                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="contentpane">
+                    <tr >
+                        <td style="color: #FFFFFF" width="25%" align="center">
+                                &nbsp;</td>
+                        <td style="background-color: #000066; color: #FFFFFF; width: 25%;" width="25%">
+                            <img alt="" height="171" src="Images/banner.jpg" width="838" /></td>
+                        <td style="color: #FFFFFF" width="25%"  >&nbsp;</td>
+	                  </tr>
+                    <tr >
+                        <td style="color: #FFFFFF" width="25%" class="auto-style1">
+                                &nbsp;<br/>&nbsp;<br/>&nbsp;<br/>
+                        </td>
+                        <td style="background-color: #000066; color: #FFFFFF; width: 838px;" onmouseover="FP_preloadImgs(/*url*/'Images/lidmaatschapnummerzoeken.JPG')">
+                            <a href="Search.aspx">
+							<img alt="lidmaatschapnummer zoeken" height="25" src="Images/lidmaatschapnummerzoeken.JPG" width="211" class="auto-style4" id="img1" onmouseout="FP_swapImgRestore()" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'Images/lidmaatschapnummerzoeken-swap.jpg')" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="Login.aspx">
+							<img alt="aanmelden" height="25" src="Images/aanmelden.jpg" width="211" class="auto-style4" id="img2" onmouseout="FP_swapImgRestore()" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'Images/aanmelden-swap.jpg')" /></a>&nbsp;&nbsp; </td>
+                        <td style="color: #FFFFFF" width="25%" class="auto-style1"  ></td>
+	                  </tr>
+	                <tr>
+	                  <td>&nbsp;</td>
+	                    <td  align="left" class="auto-style6">
+	                        <p class="auto-style8">
+	                        <br />
+	                        Welkom op de belastingservice site van de VBM.
+							<br />
+                            Heeft u vragen op belastinggebied, dan kunt u mailen naar onze <a href="mailto:belastingservice@mijnvbm.nl?subject=Een vraag voor de belastingservice@mijnvbm.nl">belastingservice: 
+	                    	</a>Vergeet niet uw telefoonnummer te vermelden.<br />
+							<span class="auto-style7">.</span></p>
+						</td>
+	                    <td>&nbsp;</td>
+	                  </tr>
+                </table>
+   
+            <div>
+                <table width="838" border="0" cellpadding="0" cellspacing="0" class="centerTable">
+                    <tr>
+                        <td class="auto-style5">
+                            <asp:contentplaceholder id="phContent" runat="server">
+                                <asp:Label ID="lblValue" runat="server" Text=".."></asp:Label>
+                            </asp:contentplaceholder>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+       
+        </form>
+    </body>
+</html>

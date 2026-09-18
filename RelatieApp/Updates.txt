@@ -1,0 +1,1140 @@
+﻿   Wijziging 5.7.0.2
+		- Veld Zilver en Goud kijken nu ook naar FLO pen veld.
+
+   Wijziging 5.6.0.1
+		- bug:2774   :Veld puzzel toegevoegd aan overig in relatiescherm.
+
+   Wijziging 5.5.0.0
+		- bug:2776   :Vinkje Dienjaar & column Dienjaar toevoegevoegd.
+
+   Wijziging 5.4.0.2
+		- bug:2722   :De functie NSK IN/Out, zat onder User rechten, nu alleen met admin recht ? 
+				      Bij verwerking NSK werdt plaatsing verkerkt. dit is nu uitgeremd   
+   Wijziging 5.4.0.1
+    - bug:   :  - aanpassing aan scherm bezwaarfase ,de rode tekst onder de datum was niet meer zichtbaar 
+   
+   Wijziging 5.4.0.0
+    - bug:1767   :  - het blok verzekeringen op tabblad overige is verwijderd 
+				:  Nieuw toegevoegd: Checkbox 75+ Rijbewijskeuring met de mogelijkheid om hier een datum in te vullen. 
+
+   Wijziging 5.3.1.9
+    - bug:1760   :  - CheckPostcode_Afdeling error bij lege tabel afgevangen
+
+   Wijziging 5.3.1.8
+    - bug:1732  :  - NSK verwerking - nsk leden met bedrag > 0 maar met Code A worden nu toegevoegd aan lijst om de contributie instantie "opzij" te wijzigen en tevens in het verslag toegevoegd.
+  	- bug:1705  :  - veld "indatum" toegevoegd aan grid in mailing scherm
+	alle assambyinfo's gelijk getrokken naar 5.3.1.8
+
+   Wijziging 5.3.1.4
+  	- bug:1728   :  - extracontrole bij Centrale inning - leden die wel ci staan en niet in de sheet staatn komen in het verslag
+  	- bug:    :  - sql mailing aangepast zodat mislukte queries blijven staan in het dialoogscherm
+
+ Wijziging 5.3.1.3
+  	- bug:1713   :  - Alle fase schermen nagelopen en zo klein als mogelijk gemaakt ( alle schermen height nu onder de 800)
+	- bug:1712   :  - Report toegevoegd overzicht per IBBGroep - selectie mogelijk voor dossiers zonder groep.
+
+  Wijziging 5.3.1.2
+	- bug:1707   :  - in de zoek resultaten staat nu, achteraan, een kolom "vn". ook in het relatiescherm heet het nu standaard "vn"
+
+ Wijziging 5.3.1.1
+	- bug:1684  :  - Alleen HelpDesk opslaan als het geen nieuwe relatie betreft.
+
+ Wijziging 5.3.1.0
+    - bug:1707  :	-   veld voornaam toevoegen aan mailing resultaten
+    - bug:1702  :	-   Aanpassing NSK verwerking, als het plaatsing nummer wordt aangepast, dan vinkje bij BOM op false
+    - bug:1702  :	-   IBB scherm. Met een rechtermuisklik op een document kan je nu een fase toewijzen.
+   	- bug:1695  :	-   Helpdesk mail onderwerp aanpassen. Het onderwerp kan worden aangepast en wordt direct verwerkt. Dus niet pas met opslaan van de relatie.
+  	- bug:1684  :	-   memo veld helpdesk - De volgorde van opslaan aangepast. eerst helpdesk daarna relatie.
+  	- bug:1644  :	-   voortaan standaard de leden zonder lidsoort weergeven in het verslag
+
+ Wijziging 5.3.0.9
+  	- bug:1638  :	-   Alleen rel_admins hadden rechten op het zoek form. Nu rel_ibb_admins toegevoegd. 
+ 	- bug:1621  :	-   IBB overzichten - optrefwoord: Datumveld toegevoegd met als startdatum -12 maanden.
+ 	- bug:1614  :	-  'lidmaatschapnummer niet langer meesturen in verzendbestand, de commasep. bijft
+
+Wijziging 5.3.0.8
+ 	- bug:1610  :	-  SEPA rechten. nieuwe groep rel_sepa voortaan ook bevoegd om SEPA bestanden te maken. voorheen allen rel_admin
+
+Wijziging 5.3.0.7
+ 	- bug:1475  :	-  Contributie verwerking NSK -  wodt nu ook gezocht met ophogende volgnummers
+ 	- bug:1558  :	-  veld 'controledatum’ = flo_pen updaten bij SEPA (alleen bij anpv)
+ 	- bug:1553  :	-  Berichten IBB of documents: bij D&D wordt nu de settings van "Filesave" gebruikt ipv "IBBFiles"
+ 	- bug:1475  :	-  Contributie verwerking NSK - 2) Als een relatie aan het voorportaal wordt toegevoegd, wordt ook het contributie bedrag vermelden in het rapport.
+	- bug:1548  :	-  Fout in ledeninvoer opgelost- Error bij aanmaken van nieuw lidsoort periode en geen wijziging in from.
+
+Wijziging 5.3.0.6
+	- bug:1513  :	-  bij SEPA Controle wordt voortaan of achternaam aanwezig is en afgekeurd indien niet
+	- bug:1511  :	-  Er staan soms records in de helpdesk tabel zonder lidid. Dit geeft problemen bij aanmaken van nieuwe relaties 
+						extra controles op lidid = 0  toegevoegd.
+	- bug:1510  :	-  bij maken van nieuwe relatie laat het alle mail berichten zien op tabblad helpdesk. 
+						'als er geen relatieid is dan een lege list geven
+	- bug:xxx  :	- Onderhoud rubrieken toegevoegd
+	- bug:1475 :	- Contributie verwerking NSK aangepast
+						soms zijn er twee regels in het NSK bestand voor 1 persoon, deze komen dan in de voorportaal terecht. door relnr te wijzigen naar een 9 op het eind worden deze tijdens de verwerking verwijderd.
+
+Wijziging 5.3.0.5
+	- bug:1476 :	- In het rapport "in behandeling per jurist" is nu de optie rubriek toegevoegd
+	- bug:1473 :	- Aanpassing SEPA variabele contributie
+						Als bedragincenten = (000) dan wordt het bedrag uit aantal_xr gehaald. staat daar niets dan wordt het overgeslagen.
+					    omdat de instanatie id afwijkt van die van VBM, wordt dit nu uit de systeem tabel gehaald, staat daar niet dan blijft het zoals het was ( het id van "BANK")
+
+
+Wijziging 5.3.0.4
+	- bug:1460 :	- als "aanhouding verzoek" is aangevinkt de tekst "Einde beslistermijn" wijzigen in "Stuiting". ook de melding in de agenda.
+	- bug:1455 :	- Overzicht IBBDossiers naar Excel geeft foute datum -
+						opgelost - sinds excel 2016 blijkt de datum als mm-dd worden getoond.
+
+Wijziging 5.3.0.3
+	- bug:1449 :	- Handler op button "nieuwe jaar" gekoppeld.
+
+ Wijziging 5.3.0.2    -
+	- bug:1454		- CurrentRelation.eindedatum vervangen door veld zilver       
+						'np bestand heeft een Uitdienst datum, vergelijk dit met de ANPV data en maak verslag.
+                                								
+Wijziging 5.3.0.1
+	- bug:1449 :	- op het contributie scherm is het nu mogelijk om handmatig een jaar toe te voegen .Jaar is altijd max jaar + 1, dus 2 x klikken maakt 2020 en 2021. 
+
+Wijziging 5.3.0.0
+	- bug:1438 :	- (!!Update sql_v5.3.0.0.sql )Toegevoegd op het tabblad overige: checkbox "Alarmering" Wanneer actief veranderd de kleur van het scherm
+
+Wijziging 5.2.0.4
+	- bug:1423 :	- in menu onderhoud - advies toegevoegd
+	- bug:1417 :	- Contributie verwerking ANPV toegevoegd
+	- bug:1422 :	- Bij wijzigingen in contributies vanuit de relatie kaart wordt er nu gecontroleerd en gewaarschuwd voordat er een ander jaar wordt gekozen.
+	- bug:1422 :	- Bij wijzigingen in contributies vanuit de relatie kaart wordt er nu ook het jaartal in de historie opgeslagen.  (dus bijv. "feb 2018")
+	- bug:xxxx :	- Indien er in de maildossier map het veld "from" niet is gevuld , past het het aan naar n.a.
+
+Wijziging 5.2.0.3
+	- bug:894 :		- voor het openen van een msg bestand eerst op "alleen lezen" zetten
+	- bug:1325 :	- bug Relatieapp zoekscherm opgelost -  Als het zoekscherm "actief" wordt gesloten en een ander zoekscherm met een andere status nog open is. werd "actief" niet meer geopend.
+					  Door een ander kleur van het scherm wordt nu duidelijk gemaakt dat het om een andere status dan actief gaat.
+
+Wijziging 5.2.0.1
+	- bug:1247 :	- Aanpassingen in IBB scherm ivm met resolutie 1400*900
+	- bug:1246:		- Drag and drop IBB: het is nu mogelijk om de datum van bestanden anders dan mail\msg aan te passen.
+	- bug:1246:		- Drag and drop IBB:Bij drag and drop presenteert het voortaan de datum van de email.
+	- bug:1149:		- Export bestand nu inclusief overzicht van email berichten via ews
+						Inclusief kopie van de documenten, opgeslagen email en email via ews
+						
+Wijziging 5.2.0.0
+	- Bug:1158		- probleem slepen vanuit de ‘verzonden items’ naar ibbdocumenten opgelost
+	- Bug:			- Framework update naar 4.6
+	- Bug:1157		- Bij selectie van een opgeslagen mail bericht (msg) wordt een preview gegenereerd.
+	- Bug:1156		- Zoeken mogelijk gemaakt in opgeslagen mail berichten (msg)
+	- Bug:894:		- Open msg meerdere keren openen. msg files worden nu opgelagen met kenmerk "alleen lezen" bij verwijderen wordt dit eerst opgeheven
+
+
+Wijziging 5.1.0.3
+	- Bug:1154:		- nieuwe fase - Claim toegevoegd. 
+	- Bug:1153:		- presenteer afzender ipv filename igv email in documenten overzicht
+	
+Wijziging 5.1.0.2
+	- Bug:1151:		- mogelijkheid hebben om alleen de brieven opnieuw te maken zonder de emails te versturen. 
+	- bug:1149:		- ivm AVG en dataportabiliteit kan er nu een XML bestand worden genereerd.
+						De rechten hiervoor worden regeled via systeeminstelling "AllowRelatieExport"
+
+Wijziging 5.1.0.1
+	- bug:1147:		-Als iemand een ; in zijn wachtwoord zet werkt de mailmerge niet meer. Veld wachtwoord wordt voortaan niet meer meegenomen in het merge bestand
+	- bug:1144		-Sepa BIC codes worden niet meer megenomen in de sepa bestanden
+
+Wijziging 5.1.0.0
+	- bug:1140		- Bij verwijderen van een dossier wordt het nu opgeslagen in de history met lidid = lidid en tabelnaam is dossiers.
+                      hierdoor wordt de verwijdering zichtbaar in de relatiekaart.
+	- bug:1141		- alleen groepen gedefineerd in tabel systeeeminstellingen "AllowDeleteIBB"  kunnen nu IBBdossiers verwijderen.
+	- bug:1142		- functie toegevoegd om berichten uit de helddesk te verwijderen dmv rechtsklik. 
+	                  alleen groepen gedefineerd in systeeeminstellingen "AllowHelpdeskMailDelete" mogen verwijderen.
+	- bug:1139		- Merge\mailing.txt bestanden worden voortaan bij afsluiten vd app verwijderd uit localappdata.
+	- bug:1139		- Merge en mailing bestanden worden voortaan in localappdata opgeslagen.
+	- bug:1135		- Het veld Notities wordt niet langer meegenomen in mergebestand via belastingservice
+	- bug:1132       - BIC code niet langer verplicht - controles verwijderd
+					 - MyRelatieCopy = _MyRelatie.ShallowCopy()  toegevoegd na opslaan memo. Ivm  vraag opslaan bij sluiten dossiier.
+
+Wijziging 5.0.1.6
+	- bug:1124       - Bug opgelost tbv label Verzoek, bezwaar en rechtbank fase indien  ongegrond/afgewezen bezwaar/beroepstermijn vullen met datum + 6 wkn
+
+Wijziging 5.0.1.5
+	- bug:1131       - De ledenapp vult na het invullen van de gegevens de geboortedatum automatisch aan met geboortejaar 19xx in plaats van 20xx. vult nu 20xx als het jaar < 20 is.
+	- bug:1130       - documenten toevoegen - De laatst geselecteerde locatie wordt nu onthouden. ipv laatste locatie vh document.
+	- bug:1129       - documenten toevoegen - bug opgelost.Template naam wordt nu net als bij IBB niet meer vult. alleen nog als gemaakt zijn via menu brieven.
+	- bug:1128       - bug opgelost Zoeken werkt niet als dossier naam een : bevat
+
+Wijziging 5.0.1.4
+	- bug:1124       - label toegevoegd aan Verzoek, bezwaar en rechtbank fase indien  ongegrond/afgewezen bezwaar/beroepstermijn vullen met datum + 6 wkn
+	- bug:1123       - rel_ibb_admin heeft nu toegang tot IBB hoofdscherm 
+	- bug:1125       - na samenvoegen documenten worden nu alle velden vaste tekstt (bijv. createdate)
+	- bug:1126       - ibb overzicht openstaande dossier nu met aantal dgn sinds laatste mut. en mogelijkheid voor overzicht alle juristen.
+	- bug:1122       - Per ongeluk gemaakte fases kunnen nu worden verwijderd dmv rechtsklik op de fase in de lijst.
+	- bug:1121       - Verzoek fase kunnen intrekken vinkje toeegevoegd, incl verwijderen agenda meldingen en dossier sluiten.
+	- bug:		    - standaard ReportsPath $ nskpath aangepast is nu voortaan leeg.
+	- bug:1119       - wijziging met documenten toevoegen in dossiers.  Net als bij de knop "toevoegen" krijg je nu bij Drag&Drop de melding het dossier eerst op te slaan.
+	- bug:1115       - knop opslaan op het helpdesk scherm is nu gerelateerd aan linkerzijde vh scherm
+
+Wijziging 5.0.1.3
+	- bug:1112       - Drag & Drop Functie aangepast. Indien het vanaf een exchange account wordt verzonden. wordt de fromname het gedeelte vanaf reciepents weggeschreven.
+					 - oplossing voor bug(het niet vrijgegeven van selectie) van outlook 2010 opgelost.
+					 - Wegschrijven van mail bericht wordt nu het id aan het einde van het bestandsnaam toegevoegd. om verwijderen van verkeerde items te voorkomen.
+
+Wijziging 5.0.1.2
+	- bug:1115       - velden in helpdesk tab iets naar boven verplaatst.
+	- bug:1112       - Drag & Drop Functie uitgebreid in Ibbdossier. Het is nu mogelijk om alleen een att. te slepen. (LETOP! alleen per stuk)
+					 - Controle op files naam karakters.
+
+Wijziging 5.0.1.1
+	- bug:1112       - Drag & Drop Functie toegevoegd aan Ibbdossier voor toevoegen van bijlages uit emailberichten.
+
+Wijziging 5.0.1.0
+	- bug:1112       - Drag & Drop Functie toegevoegd aan Ibbdossier voor toevoegen van meerdere files\emailberichten.
+	- bug:1114       - Bij opstarten van ibbdossier wordt nu het veld "onderwerp" geselecteerd ipv behandelaar.
+	- bug:1101       - bij aanmaken van nieuwe relatie mutDoor is nu leeg. (Er wordt nu een lege history record gemaakt ipv op basis van lidid 0)
+	- bug:1109       - Mogelijkheid om query voor WHERE aan te passen toegevoegd bij handmatige query tbv mailing
+
+Wijziging 5.0.0.9
+	- bug:1105       - aanpassing in overzicht speld. met vinkje ontvangen selecteert het nu de speld dragers van de geselecteerde maand ipv op basis van aantal jaar.
+	- bug:1108       - In scherm Main Groep rel_ibb_admins toegevoegd. Er stond alleen rel_ibb_users of rel_admins 
+	- bug:1107       - Labels voor keuzescherm jurisch\klacht\zorg nu ook aanpasbaar.
+	- bug:1106       - inlezen van labels.xml aangepast. er wordt nu Encoding.GetEncoding("ISO-8859-1") toegepast zodat ook karakters als ë worden toegestaan.
+
+Wijziging 5.0.0.8
+	- bug:1049	 	 - ivm Problemen mailing, Het controle op veld Notities en verwijderen indien bestaat.
+
+Wijziging 5.0.0.7
+	- bug:1099	 	 - zoeken naar namen met bijzondere leestekens werkt nu ook zonder de bijzondere leestekens in het zoekveld
+	- bug:1095	 	 - Rechten probleem verzendbestand. rel_users hebben nu ook de rechten om het bestand te maken.
+						tevens wordt er een logmelding gemaakt in de history.
+Wijziging 5.0.0.6
+	- bug:	 	 	- Diverse aanpassingen ivm sql verbindingen
+	- bug:1091	 	- Function ValidEmail regex aangepast (volgens RFC 5322)
+	- bug:1092	 	- indien het een nieuwe relatie is EN er maar 1 bond in de tabel staat, wordt nu automatisch die ID ingevuld.
+	- bug:1087	 	- Als er nog geen gebruikersconfigfile is zal het nu, indien aanwezig, een copy van een versie in de app map te kopieren.
+
+Wijziging 5.0.0.5
+	- bug:	 	 	- oproepen relatiescherm omgezet naar id, ging dmv lidnr
+	- bug:			- Bij toevoegen van nieuwe templates opent het nu de standaard locatie ipv programma locatie
+
+Wijziging 5.0.0.4
+	- bug:1079 	 	- Bug opgelost voor het maken van default labels xml
+
+Wijziging 5.0.0.3
+	- bug:1084 	 	- Functie zetten van dossiermap rechten toegevoegd.
+	- bug:1080 	 	- Controle bij document maken\toevoegen toegevoegd. indien nieuw eerst opslaan voor brief maken\toevoegen
+	- bug:1083 	 	- Functie autonummering toegevoegd. Tijdens opslaan relatiekaart , lidnr = "" of 0 en indien systeeminstelling SetAutolidnr = true dan autonummer.
+	- bug:1081 	 	- nieuwe functie toegevoegd die eventuele accents in het emailadres vervangt.
+	- bug:1082 	 	- Brieven\emailing worden nu alleen uitgevoerd indien er records zijn.
+
+Wijziging 5.0.0.2
+	- bug:1079 	 	- aanpassen columnheaders is nu mogelijk via labels.xml
+	- bug:  	 	- aanpassen labels in formulieren frmRelatieSearch, frmRelatie,frmIBBDossier, frmMailing is nu mogelijk via labels.xml
+
+Wijziging 5.0.0.1
+	- bug:1062 	 	- bug opgelost met verwijderen van stornering.
+	- bug:1068 	 	- mogelijkheid toegevoegd om nieuwe fases tmaken en te gebruiken. Alle nieuwe fases gebruiken scherm en principe van fase "verzoek"
+	- bug:1075 	 	- Tijdens de email validatie wordt nu eventuele spaties automatisch verwijderd.
+
+Wijziging 5.0.0.0
+	- bug:1030 	 	- rel adres rechten uitgebreid met Tabblad lidmaatschap / Blok Indeling 
+	- bug:1062 	 	- Mogelijkheid toegevoegd om stornering te verwijderen "Het bedrag bedrag wordt dan weer bij de periode opgeteld"
+	- bug:1063 	 	- (e)Mailing worden nu ook weggeschreven in de correspondentiekaart
+	- bug:1063 	 	- veld Bankrek verwijderd uit overzicht
+
+Wijziging 4.2.2.
+	- bug:1060 	 	- mailing module: emailadressen worden nu gevalideerd tijdens het opstarten van het scherm en gemeld en afgesloten als er een ongeldig adres is gevonden.
+
+Wijziging 4.2.2.3
+	- bug: 1059	 	- mailing module emailadres validatie toegevoegd voor het verzenden
+
+Wijziging 4.2.2.1 
+	- bug: 1056	 	- bug progessbar opgelost.
+	- bug: 1054	 	- mailing module opmaak aangepast.
+	- bug: 1058	 	- bug opgelost met xHUISNRTV .
+	- bug: 1055	 	- mogelijkheid bekijken om mnet ander account te sturen toegevoegd. haalt nu een lijst op van de alternatieve mailboxen (met full access rights)
+	- bug: 1052	 	- (e)mailing functie - nu een duidelijke melding wanneer er nog geen selectie is.
+
+Wijziging 4.2.2.0
+	- new:	 	 	-  nieuwe (e)mailing functie - op basis van wel\geen emailadres wordt er een mail\brief gegenereerd.
+	- bug:1051 	 	-  Foutmelding bij IBAN na Tab opgelost
+	- bug:1050 	 	-  Wanneer er een brief wordt gemaakt en het dossier nog geen id heeft geeft het nu de melding "Het dossier moet eerst worden opgeslagen!"
+
+Wijziging 4.2.1.1
+	- bug:1049 	 	- Mergefile fails if CR in notities. veld "notities" wordt nu niet meer mee genomen in het merge bestand.
+	- bug:1046 	 	- contole IBAN\BIC code. nu ALLEEN de validate_iban als het begint met NL?
+
+Wijziging 4.2.1.0
+	- bug:1043 	 	- Map,naam en waardes aangepast van de config file
+	- bug:1044 	 	- Button “Wijzigingen” in relatiekaart is nu beschikbaar voor rel_adres gebruikers. 
+	- bug:1045	 	- locatie Groepsvak “opzeggingen” verplaatst ivm buiten het scherm vallen bij lettertype 11 
+
+Wijziging 4.2.0.1
+	- bug:1042 	 	- voor beeindiging lid wordt er nu gecontroleerd of alle dossiers zijn afgehandeld. Zo niet een melding met de openstaande dossiernr en de behandelaar.
+
+Wijziging 4.3.0.0
+	- bug:    	 	- !!!LETOP!!! Naam en locatie configfile is aangepast naar RelatieApp
+
+Wijziging 4.2.0.0
+	- bug:1034 	 	- veld ZipCode toegevoegd aan frmRelaties tbv buitenlandse postcode(verzendbestand) (!!UPTDATE SQL Nodig!! )
+						("postcode NL en postcode buitenland mogen niet beide gevuld zijn.)
+
+Wijziging 4.1.2.3
+	- bug:1032 	 	- <sitevizier> checkbox rechten toegevoegd aan rel_blad
+					- foutmelding opgelost bij leegmaken aantal tri\xr
+
+Wijziging 4.1.2.2
+	- bug:1033 	 	- Bug opgelost waarddor wijzingenhistorie niet meer werden opgeslagen
+
+Wijziging 4.1.2.0
+	- bug:1032 	 	- wanneer lid van "rel_blad" worden lidmaatschap kaart toegevoegd en Triv en xrcize en reden enabled.
+	- bug:1030 	 	- Rel_adres leden kunnen nu wel brieven (tab correspondentie)inzien. 
+	- bug:1031 	 	- aanpassing rechten rel_adres, rel_functies. 
+
+Wijziging 4.1.1.0
+	- bug:1026 	 	- Nieuwe groep maken rel_adres.Deze groep mag alleen NAW + telefoon email gegevens wijzigen en brieven sturen.Reg. nummers zijn ook disabled
+	- bug:1028 	 	- Veld fax werk verwijderdt, Veld Notities memo toegevoegd op tab overig. !! SQL update Add_Fields_v4.1.1.0.sql!!
+	- bug:1024 	 	- relatie: dubbel save (timestamp) IsNull controle toegevoegd.
+
+Wijziging 4.1.0.2
+	- bug:1024 	 	- relatie: dubbel save (timestamp) bug opgelost
+
+Wijziging 4.1.0.1
+	- bug:1023 	 	- relatie: Probleem bij aanmaken nieuwe relatie opgelost
+
+Wijziging 4.1.0.0
+	- bug:1021 	 	- relatie: controle toegevoegd of relatie recortd tussentijds is gewijzigd. krijg melding kan worden overruled (SQL update)
+	- bug:1016 	 	- IBB:uitbreiding query overzicht dossiers, geboortedatum in het overzicht. nu geen invloed meer op andere reports
+
+Wijziging 4.0.1.2
+	- bug:1016 	 	- IBB:uitbreiding query overzicht dossiers, geboortedatum in het overzicht
+	- bug:996 	 	- IBB:Zoekveld werknemernr
+	- bug: 	 		- IBB: nsk verwerking opgelost
+	- bug:1007 	 	- IBB: positie Popup fases
+
+Wijziging 4.0.1.1
+	- bug:918 	 	- IBB: 3 kleuren toegevoegd aan documenten context menu categorien
+	- bug:1007		- IBB: starlLocatie van fase scherm verhoogd.
+
+Wijziging 4.0.1.0 	
+	- bug:918 	 	- IBB: 3 kleuren toegevoegd aan documenten categorien
+ 	- bug:1005 	 	- mogelijkheid toegevoegd om lettertype/grootte aan te pasen
+ 	- bug:1005 	 	- IBB: notitieblokje toegevoegd aan IBBdossier scherm.
+	- bug:1005 	 	- IBB: Documenten lijstwordt nu standaard op datum gesorteerd
+ 	- bug:971 	 	- IBB: Herstel verzuim termijn NIET automatisch vullen. Wel automatisch wissen indien nadere gronder wordt ingevoerd. (!!UPTDATE SQL Nodig!! )
+ 	- bug:971 	 	- IBB: Einde beslistermijn veld 6 extra weken wordt radio button met drie keuzes: 
+							- standaard (dus 6 weken vanaf...) 
+							- 6 extra weken 
+							- handmatig: indien voor handmatig gekozen, dan niet automatisch (her)berekenen.  
+
+Wijziging 4.0.0.2
+ 	- bug:886	 	- IBB: Bij aanmaken nieuwe RB of CRVB dan datum alleen overnemen van BF bij nieuwe RB en datum van RB bij nieuwe CRVB, anders geen datum
+	- bug:1003 		- Nieuwe postcode database toegevoegd en routines aangepast !!LETOP nieuwe Table nodig!!
+	- bug:1000	 	- IBB: zweven label nadere gronden opgelost
+
+Wijziging 4.0.0.1
+					- IBB: Bij openen bezwaar wordt data alleen berekend indien het een nieuwe betreft
+					- IBB: calender butttonm  wordt nu overgeslagen bij tabcontrol (activeert dus datum calculatie na tab)
+	- bug:1001 		- IBB: Bij maken nieuw bezwaar als er nog een andere open is worden er geen automatische data berekend omdat er geen datum besluit is als uitgangspunt.
+	- bug:999  		- IBB: Bij verzoek kunnen nu  “Einde beslistermijn en “datum besluit” naar agenda worden gezet.
+	- bug:1000 		- IBB:  label bezwaar (schrift) zweeft opgelost
+
+
+Wijziging 4.0.0.0
+	- bug:971		- IBB: Bij verwijderen "aanhouding bezwaar" wordt de data weer herberekend.
+	- bug:995		- Veld plaatsing, code aangepast van int naar string, zodat voorloopnul mogelijk wordt. (!!UPTDATE SQL Nodig!! )
+	- bug:994		- IBB: aanpassing verzoek. checkbox aanhouding.Aanhouding verzoek maakt einde beslistermijn leeg. Bij uitvinken wordt einde beslistermijn weer gevuld. 
+	- bug:996		- IBB: aanpassing zoekscherm. Als er bij zoekveld relatie een alfa wordt ingevult, wordt de check op achternaam gezet.Bij een nummerriek de werknemernr. 
+	- bug:971		- IBB: tabvolgorde in bezwaar aangepast
+
+Wijziging 3.4.5.1
+	- bug:			- IBB: datum calculaties in bezwaar module aangepast
+	- bug:595		- IBB:Intrekking heeft tot gevolg dat het dossier wordt afgesloten, de afsluitdatum wordt nu ook gevuld
+	- bug:'geen		- IBB:Mogelijkheid toegevoegd om toekomstige termijnen overzicht te mailen naar behandelaar per behandelaar
+
+Wijziging 3.4.5.0
+	- bug:974		- Het maakt nu een tijdelijk eml file die wordt opgeslagen in de users temp dir.
+						bij het afsluiten dossierkaart worden alle eml bestanden verwijderd
+	- bug:972		- rel_ibb_users en rel_ibb_admins kunnen nu brieven versturen vanuit de relatieapp
+	- bug:954		- er kan nu alleen maar uppercase worden ingevuld in het BIC veld
+	- bug:964		- tijdens verwerking NSK wordt het Veld "land" , bij adreswijziging, nu leeg gemaakt nieuw adres en de eventuele oude waarde in de historie tabel.
+
+Wijziging 3.4.3.0
+	- bug:954		- extra controles toegevoegd op IBAN en BIC in hoofdletter en controle op spaties. fouten iban nummers worden afgekeurd en in controle file getoond
+	- bug:935		- IBB: Bij individuele brieven is het nu mogelijk om vanuit de dossierkaart het dossiernummer te verwerken in de templates.
+	- bug:940		- IBB: navigatie. mogelijkheid toegevoegd om vanuit de dossierkaart naar de ledenkaart te gaan dmv menu keuze "open ledenkaart"
+
+Wijziging 3.4.2.1
+	- bug:924		- IBB: dmv rechtklik op document/mail kan nu ook email uit de algemeene mailbox worden verwijderd.
+	- bug:918		- IBB: Classificatie documenten/email aangepast naar geel, groen, blauw, oranje, paars, rood.
+	- bug:904		- IBB: Mogelijk gemaakt om weergave documenten/email volgorde aan te passen dmv header klik
+
+Wijziging 3.4.2.0
+	- bug:918		- IBB: dmv rechtklik op document kan er nu een classificatie worden toegekend aan zowel documenten als email.(Add_Fields_v3.4.2.0.sql)
+	- bug:916		- IBB: checkbox 'intrekken' toegevoegd aan VoVo (Add_Fields_v3.4.2.0.sql)
+	- bug:915		- IBB: dmv rechtklik op document kan je nu het onderwerp wijzigen
+	- bug:904		- IBB: Het gridscherm documenten 25% breder en iets hoger gemaakt
+
+Wijziging 3.4.1.2
+	- bug:884 		- mailingscherm relatieveld mogelijkheid toegevoegd voor rel-admins om zelf queries te maken.
+	- bug:900 		- IBB: Hidden veld wkn2 werd niet correct ingevuld  wordt nu geinitieerd op 6 wkn wanneer leeg
+	- bug:901 		- IBB: IBB toekomstige afspraken opruimen bij uitspraak fase. de onderstaande verwerking is op form niveau:
+						'Als beslissingdatum is ingevuld
+						'en alleen als er wat is gewijzigd
+						'Verwijder dan alle toekomstige afspaken, behalve bij status "afwachting", maar dan zou ook geen beslissingdatum moeten zijn
+						'en er nog geen volgende fase is aangemaakt
+						'dan de tijdelijke reminder zetten
+						'dan de tijdelijke reminder verwerken
+	- bug:886 		- IBB:bugs oplost
+
+Wijziging 3.4.1.0.
+	- bug:886 		- IBB: reminder beroepstermijn (Add_Fields_v3.4.1.0.sql)
+							toevoegen aan jdtranslate D:\Dotnet\VBMNOV\tmp\bugid866.xls
+							Bij opslaan van fase BF,RB of CRVB wordt als datum bij beslissing is ingevuld een reminder gemaakt in de agenda's
+							Bij het aanmaken van de volgende fase wordt dan deze data gebruikt voor de datum besluit/uitspraak en datum termijn.
+							TODO De reminders van de vorige fase worden nog niet verwijderd
+	- bug:886		- IBB: procedure nummer,(Add_Fields_v3.4.xxx.sql)
+							Veld kenmerk toegevoegd aan Bezwaar,Beroep en Hoger beroep
+							zoekveld kenmerk toegevoegd Ibb zoek scherm
+	- bug:887		- IBB: direct openen indien 1 dossier uitgeschakeld, nu bij dubbelklik EN indien 1 dossier wordt het dossier geopend.
+
+Wijziging 3.4.0.1
+	- bug:880		- IBB: bij nieuw Document in IBB wordt nu de omschrijving vd template als onderwerp gegeven.
+	- bug:837		- IBB: rapport Overzicht niet gemuteerde dossiers toegevoegd. Opmaak excel uitgewerkt	                        
+	- bug:874		- IBB: het reeds gesloten dossier wordt niet meer automatisch de datum van vandaag gegeven maar gefocust met rood veld.
+	- bug:...		- IBB: Zoekscherm IBB dossiers aangepast. Moederdossiers naar beneden verplaatst en bij selectie in leden lijst wordt er,
+	                       indien er maar 1 dossier is, deze direct geopend
+	- bug:851		- IBB: Verzoek fase De agenda reminder op "einde beslistermijn" werd niet getrickert. nu wel.
+	- bug:835		- IBB: bij wijziging van datum "Bezwaarfase nadere gronden" de beslistermijn datum berekenen (6/12 wkn)
+	- bug:...		- bug opgelost in mailing scherm bij dubbelklik op hoofditem in brieven/email lijst
+	- bug:875		- IBB: Sluitingsdatum toegevoegd aan IBB rapporten
+
+Wijziging 3.4.0.0
+	- bug:851		- IBB: verzoekfase , Beslistermijn is de stanaard 6 weken aangepast naar 8 weken.
+						De agenda reminder staat nu op "einde beslistermijn", was "datum besluit"
+	- bug:837		- IBB: rapport Overzicht niet gemuteerde dossiers toegevoegd. menu-IBB-overzicht-mutatie (Add_Fields_v3.4.0.0.sql)
+	                        Opmaak excel moet nog worden uitgewerkt
+	- bug:855		- IBB: IBB Hoofdscherm moederdossiers overzicht laat voortaan alleen openstaande moederdossiers zien.
+	- bug:860		- IBB: mogelijkheid toegevoegd om documenten incl de daadwerkelijk flle en dus ook opsgelagen  mail te verwijderen. (met melding in historie)
+						   d.m.v rechtsklik op document en kies verwijderen.
+	- bug:862		- IBB: bug Keuzelijst in fase voornemen opgelost (Add_Fields_v3.4.0.0.sql)
+	                       label in scherm voornemen “indiendatum” gewijzigd in “datum voornemen”. 
+	- bug:822		- veld 'groep" toegevoegd op dossier scherm, te gebruiken als selectie in de mailing. (Add_Fields_v3.4.0.0.sql)
+						onderhoud ibbgroepen toegevoegd onder IBB menu.
+	- bug:856 		- Bug opgelost bij refresh fase overzicht wanneer en geen zijn.
+	- bug:895 		- Controle bij toevoegen documenten of het dossier het een nieue nog niet opgeslagen dossier is.
+	- bug:... 		- Voor emailing wordt nu gekeken naar afdeling = "email" om te kunnen indentificeren als email en niet als doc.
+
+Wijziging 3.3.2.5
+	- bug:822		- eMailer Replace variable toegevoegd. (xACHTERNAAM,xINIT,xTUSSENVOEGSEL,xTITELVOOR,xGESLACHT,xEMAIL,xPOSTCODE,xADRES,xHUISNR,xHUISNRTV,xPLAATS)
+	- bug:...  		- IBB: Emails in ibb.agenda weergave "Van" en "Aan" opgelost.
+
+Wijziging 3.3.2.4
+	- bug:822		- eMailer via mailig scherm, body als template toevoegen in template-tabel
+ 	- bug:841  		- Opbouw lidkaart : bij zowel lid van rel_admins als rel_ibb_admins ging het opbouwen van de tabs niet goed. IBB staat er twee keer, en de tabs zijn leeg. 
+ 	- bug:839  		- Report afgesloten dossier kijkt vanaf nu naar de "datum afgehandeld".
+ 	- bug:839  		- Veld "datum afgehandeld" toegevoegd aan ibbdossier. oa tbv "report afgesloten"
+					  het veld wordt auto gevuld met huidige dag maar kan aangepast worden.  
+	- bug:...  		- Er kunnen nu geen nieuwe fases worden gestart als het dossier  is afgehandeld.
+	- bug:836  		- Namen fases aangepast.Schermnamen zijn nu dynamisch gemaakt en kunnen nu worden aangepast via de description uit de database tabel jdTypes
+					Centrale raad van Beroep hernoemen > Hoger beroep 
+					Rechtbank hernoemen > Beroep 
+	- bug:...  		- opgelost. crash bij toevoegen 2e fase terwijl een andere fase niet is afgesloten.
+	- bug:...  		- Controles toegevoegd in fases. Er kunnen niet meer dan 1 open fases zijn, bezwaarfase uitgezonderd. (stond alleen nog maar in beroep)
+
+Wijziging 3.3.2.3
+	- bug:...  		- Bug opgelost bij update outlook reminders vanuit form event 
+	- bug:...  		- IBB: Emails die in ibb.agenda met in de map naam het dossiernr worden voortaan getoond in de ibb documenten
+	- bug:...  		- IBB: mail kunnen nu vanuit de ibb documenten lijst worden bekeken.
+
+Wijziging 3.3.2.1
+	- bug:823  		-  Aanpassen op mailing scherm. nato --> gevaarlijke stoffen
+		               relatiescherm veld nato/paresto hernoemt naar Gevaarlijke stoffen 
+	- bug:805  		-  IBB:Bezwaar, Aanhouding beroep kan nu ook als definitief beroep is ingevuld en voorlopig leeg is. 
+	- bug:820		-  tabbladen volgorde aangepast. heldesk en IBB staan nu ook bij ibb admins achteraan
+
+Wijziging 3.3.2.0
+	- bug:xxx  		-  Rel_users hebben nu ook de mogelijkheid tot wijzigen lidnummer en status.
+	- bug:733  		-  column Korting toegevoegd aan rangen table (wordt vervanging voor NSK korting)Zit nog geen functie achter maar sql update Add_Fields_v3.3.2.0.sql noodzakelijk
+	- bug:784  		-  IBB:overzicht toegevoegd voor IBB waarbij gezocht kan worden op trefwoorden
+
+Wijziging 3.3.1.1
+	- bug:803  		- aanpassingen Sepa schermm:  Tab Volgorde aangepast
+	                  Velden kunnen nu worden aangepast na controlesepa of een nieuwe run wil uitvoeren zonder eerst het scherm te hoeven sluiten.
+	- bug:785  		- intrekking van een beroepschrift : De text  "Beslissing Bezwaar wordt...." aangepast naar  "Intrekking beroep wordt ...."
+	- bug:786  		- overboeken dossier:Bij omzetten behandelaar wordt nu alleen gekeken naar toekomstige items.
+                      Indien aanwezig wordt gevraagd of deze moeten worden verwijderd en op de nieuwe naam moeten worden gezet
+	- bug:801  		- In de Agenda items via ibb worden nu ook de naam vd relatie aan het onderwerp toegevoegd
+
+Wijziging 3.3.1.0
+	- bug:787 		- Herstelverzuimtermijn reminder standaard op 7 dagen gezet,
+	- bug:788 		- Een nieuw veld LOI toegevoegd, hiermee is Tankpas komen te vervallen.  !!! Update_SQL_v3.4.0.0.sql !!!
+	- bug:760 		- bij Print ledenadministratie email adres toegevoegd indien niet aanwezig de tekst "onbekend"        
+	- bug:744		- overzicht overleden trivizier aangepast. - dienstvak zonder nummer toevoeging toegevoegd achter rang.
+
+Wijziging 3.3.0.6
+	- bug:756 		- SEPA gewijzigde iban element aangepast -<OrgnlDbtrAgt>-<FinInstnId>-<Othr><Id>SMNDA</Id> Othr werd ook aangemaakt in de elementen wanneer dit niet moest.
+
+Wijziging 3.3.0.5
+	- bug:740		- IBB: De lijst sorteerd op achternaam , niet opdossiernummer vanwege distinct query. 
+					  Het zoekveld geeft nu resultaten op achternaam
+	- bug:744		- overzicht overleden trivizier aangepast. Als nazorg record bestaat wordt de leeftijd berekend op basis van overlijden ipv datum overzicht.
+					- overzicht overleden trivizier aangepast. - dienstvak toegevoegd achter rang.
+					- Leeftijd werd van relatie werd niet correct berekend indien de persoon dit jaar nog niet jarig was geweest. is nu gecorrigeerd
+	-				- SEPA gewijzigde iban element aangepast -<OrgnlDbtrAgt>-<FinInstnId>-<Othr><Id>SMNDA</Id>
+	- bug:690		- IBB: bezwaarfase: Als Voorlopig bezwaar wordt gevuld en Aanhouding bezwaar NIET is aangevinkt wordt "einde beslistermijn"  leeggemaakt
+	                  Als Bezwaarschrift  wordt gevuld wordt "einde beslistermijn" NIET meer leeggemaakt, "Herstel verzuimtermijn'' wordt nog WEL leeg gemaakt
+	 
+Wijziging 3.3.0.4
+	- bug:688		- relatiescherm: bij status wijziging van history naar actief, wordt nu gevraagd naar instroom datum tbv in/uit verslag
+	- bug:655		- agendaitems worden nu standaard om 08:00 tot 09:00 gemaakt tenzij anders aangegeven i.p.v. 00:00 zodat ze in werkuren overzicht blijven
+	- bug:703		- Bij toevoegen van email2.. kan er nu voor worden gekozen om de mail in je outlook overzicht gelijk te categoriseren
+	- bug:704		- intergratie email2 relatie,Er kan nu ook mail aan de relatie kaart worden toegevoegd
+	                  overzicht in tab "helpdesk"
+	- bug:729		- relatiescherm -Tab overige - label "cadeau" aangepast naar "checklist overlijden"
+	- bug:728		- veld bank rekening verwijderd van relatie scherm
+					- Zoeken op bank rek. veranderd naar IBAN nummer
+					- Controles toegevoegd op Bic code. bij invullen biccode, opslaan relatie en SEPA run
+    - bug:687		-  nazorgmedewerker= tekst(50) en opgebaard (ja nee) togevoegd aan nazorg
+
+Wijziging 3.3.0.3
+    - bug:		- agenda items gaan nu via ews, dus niet meer via mapi.
+    - bug:		- mogelijk toegevoegd om een sepa te maken voor specifiek lidnr met gewijzigde ibannummers
+    - bug:		- ter voorkoming van het optellen van meerdere contributie bedragen bij vast lopen wordt het niet meer opgeteld maar overschreven met het bedrag uit de separun.
+    - bug:		- Controle toegevoegd voor indienst datum bij SEPA run
+    - Bug:662	-  optie ‘reden’ XRcise toegevoegd
+    - Bug:687	- Aanpassing scherm nazorg
+					alle tekst velden lengte invoer verhoogd naar 100
+    - Bug:695	- IBB: in overzicht termijnen wordt nu ook de cliënt naam vermeld.
+					overzicht van nieuwe dossiers vanaf een bepaalde datum per jurist
+					overzicht van in behandeling zijnde dossiers per jurist
+					overzicht van afgesloten dossiers vanaf een bepaalde datum per jurist 
+    - Bug:697	- IBB:Rel_users kunnen weer in correspondentie (brieven openen)   
+    - Bug:689	- Bij nieuw lid staat de cursor weer op werknemernummer
+
+Wijziging 3.3.0.2
+    - Bug:656	- relatiescherm Checkbox toegevoegd sitevizier
+
+Wijziging 3.3.0.1
+    - Bug:		- IBB: Maken van IBB data Overzicht rapport is weer mogelijk
+    - Bug:655   - IBB: Nieuwe hoorzitingen krijgen voortaan standaard tijdstip 8:00
+    - Bug:663,648- opgelost:Rel_readers kunnen brieven maken en opslaan.
+    - Bug:618	- opgelost:bij nieuwe nazorg werd triv melding standaard op ja gezet.
+    - Bug:		- Toevoegen nieuw lid probleem opgelost 
+
+Wijziging 3.3.0.0 
+    - Bug:633	- IBB: checkbox toegevoegd aan IBB hoofdscherm. laat alleen actieve of alle dossiers zien, default aan. 
+    - Bug:632	- IBB: mogelijkheid toegevoegd om een tijdperiode op te geven bij outlook events van hoorzitting en zitting.(Add_Fields_v3.3.0.0.sql)
+    - Bug:634	- SEPA: niet geaccepteerde chars in de naam worden nu vervangen.
+	- Bug:634	- SEPA: veld "vaste omschrijving" toegevoegd aan form indien ingevuld word deze genomen indien leeg het lidnr(zoals het was)
+	- Bug:xxx	- IBB: Processen Outlook events aangepast
+    - Bug:xxx	- IBB: Datum velden wijziging controle aangepast
+    - Bug:630	- IBB: De datum zitting VoVo heeft nu ook een knopje naar agenda. 
+    - Bug:635	- group rel_ibb_admins toegevoegd welke een nieuw ibb dossier mogen maken
+    - Bug:618	- De checkboxen op tabblad Nazorg veranderd naar radio buttons. Geen default value. Dus standaard staan beide uit. (add_fields_v3.3.0.0)
+
+  Wijziging 3.2.0.2
+    - Bug:612	- IBB: help icon en link op ieder IBB scherm
+    - Bug:566	- IBB: wisselen van keuze juridisch of klachtenprocedure nu alleen mogelijk als er geen fases zijn
+    - Bug:616	- Bij Trivizier = 0 kan je nu een reden kunnen opgeven
+    - Bug: 		- Voor maken van IBB verslag, query omgezet naar storedprocedure "IbbTermsReport" (Add_Fields_v3.2.0.2.sql)
+    - Bug: 		- Zoek functie: bij geen windows search aanwezig de throw error aangepast naar gewone melding
+    - Bug:562	- IBB:tab Algemeen hernoemd naar Notities
+
+ Wijziging 3.2.0.1
+    - Bug:600	- toegevoegd Controle tijdens invoer van het ibannummer in relatie kaart
+				- toegevoegd Ibannummer controle tijdens Sepa process. account wordt overgeslagen met wel een bericht in samenvatting
+    - Bug:599	- IBB:documenten in correspondetie kunnen nu geopend worden dmv dubbelklik
+    - Bug:598	- IBB:Bij fase voornemen geen ingebrekestelling. De checkbox ingebrekestelling en het Datum -en opmerking veld verwijderd.
+    - Bug:596	- IBB:Bij klacht en ombudsmanm staat "Reactie oordeel" is nu "oordeel"
+    - Bug:597	- IBB:Volgorde velden VoVo aangepst
+    - Bug:595	- IBB:Bij intrekking bezwaar de een melding: Beslissing bezwaar wordt <datum> verwijderd
+	- Bug:594	- IBB:Bij nieuw dossier stond juridish i.p.v. juridisch 
+
+ Wijziging 3.2.0.0 (Add_Fields_v3.2.0.0.sql)
+    - Bug:xxx	- IBB:in de Fases het veld datum besluit wordt niet meer disabled
+    - Bug:566	- IBB:Dossier nieuw – scheiding mogelijk gemaakt in juridisch of klachtenprocedure
+					en in klachtenprocedure fases Klacht / Nationale ombudsman toegevoegd
+    - Bug:580	- IBB:Heropening Na heropenen beroepsfase heet "nadere gronden" weer "bezwaartermijn". aangepast in bezwaar, RB  en CrvB
+    - Bug:581	- IBB:fase RB: indiendatum(vovo),Verweerschrift (vovo) toegevoegd
+					  fase CrvB: indiendatum(vovo),Verweerschrift (vovo) toegevoegd
+					  fase bezwaar: indiendatum(vovo),Verweerschrift (vovo) toegevoegd
+    - Bug:579	- IBB:Rechtbank fase en CrvB fase verweerschrift  datumveld "Verweerschrift ontvangen" toegevoegd.
+    - Bug:578	- IBB:in Rechtbank fase de reminder datum hoorzitting veranderen naar Datum zitting 
+    - Bug:576	- IBB:Fase Voornemen nu ook hoorzitting net als bezwaar fase
+   	- Bug:576	- IBB:Alle processen voor het automatiche aanmaken van de volgende fase zijn nu verwijderd
+	- Bug:565	- IBB:Een aanhouding kan alleen indien er al een voorlopig bezwaar en/of een bezwaarschrift is gemaakt. controle "bezwaarschrift" toegevoegd
+
+ Wijziging 3.1.0.1
+   	- Bug:565	- IBB:melding "Kan ''Einde Beslistermijn'' niet invullen als fase in''aanhouding bezwaar''staat " verwijderd.
+   	- Bug:564	- IBB:melding "Kan ''Einde Beslistermijn'' niet invullen als ''Bezwaarschrift'' is ingevuld!" verwijderd.
+   	- Bug:561	- IBB:Fases wel kunnen opslaan bij geen exchange, alleen warning
+  	- Bug:563	- weergave aangepast bij een resolutie van 1280.
+ 	- Bug:560	- NSK in- out dbnull naar datum oplossen. indien leeg dan LastDayCurrentMonth
+ 	- Bug:		- Bij de Separun wordt CollectionDate voortaan berekend aan de hand van de (laatste dag vd maand - systeeminstelling van SEPA_COLLDT)
+	- Bug:		- bij openen van stornering scherm wordt nu gekeken naar LastSepaPeriode ipv LastClieopPeriode
+	- Bug:		- Aanpassingen SEPA mandate DtOfSgntr. als indiensdatum in de toekomst ligt stuur dan (vandaag - 1 dag)
+	   
+Wijziging 3.1.0.0
+	- Bug:		- IBB:Griffie kosten,nieuw veld memo toegevoegd.(Add_Fields_v3.1.0.0.sql)
+	- Bug:555	- SEPA xml wegschrijven met nummer. (Add_Fields_v3.1.0.0.sql)
+	- Bug:		- Aanpassingen SEPA mandate . (Add_Fields_v3.1.0.0.sql)
+	- Bug:556	- SEPA aantal transacties limiet  op systeminstelling Clieop limiet. 
+	- Bug:554	- De velden krijgsmachtsdeel en dienstvak gerelateerd aan elkaar. D.w.z. dat dienstvak afhankelijk wordt van krijgsmachtdeel. (Add_Fields_v3.1.0.0.sql)
+	- Bug:xxx	- IBB: diversen wijzigingen.(Wijzigingen IBB 12-11-2013.docx)
+
+Wijziging 3.0.0.0
+	- Bug:553	- IBB:Griffie kosten, kan nu gekoppeld worden aan een fase.
+	- Bug:550	- IBB:Beroepsfase CRVB toegevoegd
+	- Bug:xxx	- IBB: diversen wijzigingen.(Wijzigingen na 2 9 6 1 doc)
+
+Wijziging 2.9.6.1
+	- Bug:xxx	- IBB: mogelijkheid om een dossier aan een moeder dosier te koppelen.
+						dmv de zoek button wordt het veld moederdossier gevuld met een lijst bestaande dossiers.
+						tijdens opslaan wordt gecontroleerd of invoer ook daadwerkelijk bestaat
+	- Bug:549	- IBB:SEPA_IBAN wordt voortaan uit systeeminstellingen tabel gehaald
+	- Bug:xxx	- relatieapp: bij toevoegen van stornering, wordt nu geopend met maand van de laatste incassorun
+	- Bug:xxx	- relatieapp: bij toevoegen van stornering, wordt nu geopend incl het bedrag vd laatste stornering van vorige periode
+	- Bug:547	- IBB:aanpassing label Beroepfase bezwaarschrift is beroepschrift
+	- Bug:551	- IBB:Extra messageboxen zijn verwijderd. er komen dus alleen nog de meldingen in het scherm. die alleen vertellen dat het niet kan. maar niet waardoor.
+	- Bug:549	- IBB:SEPA_IncassantId wordt voortaan uit systeeminstellingen tabel gehaald
+	- Bug:552	- IBB:fout melding leegmaken van beslistermijn verwijderd
+	- Bug:545	- IBB:onchange event van bezwaardatum: Controle toegevoegd of deze velden herstel en beslis ook daadwerkelijk gevuld zijn.
+	- Bug:546	- IBB:Veld "12 weken na besluit" verwijderd
+
+Wijziging 2.9.6
+	- Bug:xxx	- Relatie: Helpdesk Notitieveld toegevoegd.
+	- Bug:xxx	- IBB: hoofdscherm moeder-kind overzicht.
+	- Bug:xxx	- IBB: diversen wijzigingen.(wijzigingen na 2.9.5.1 doc)
+
+Wijziging 2.9.5.1
+	- Bug:xxx	- trivizier bestand aangeplast. schrijft nu altijd landcode mee
+
+Wijziging 2.9.5
+	- Bug:xxx	- IBB voornamelijk Bezwaarfase wijzigingen
+	
+Wijziging 2.94
+	- Bug:xxx	- IBB: Opslaan ibb dossier controle rel_ibb_users toegevoegd.
+	- Bug:xxx	- ivm overgang naar IBAN, velden IBAN en BIC toegevoegd aan relatie scherm
+	- Bug:xxx	- IBB: Opslaan BF controle besluitdatum verplicht - 
+
+Wijziging 2.93
+	- Bug:xxx	- redesign Exchange funcionatliteit tbv gescheiden jurist en ibb agenda
+	- Bug:xxx	- IBB: funcionatliteit Fase verzoek,VnV en bezwaar veel mogelijkheden toegevoegd(zie wijzigingen na 2.9 doc)
+	- Bug:xxx	- IBB: Fase VnV toegevoegd
+	- Bug:xxx	- IBB: mogelijkheid voor koppelen aan fase bij met definitief maken van een document
+	- Bug:xxx	- Checkbox bij toegvoegen documenten via Relatieapp verwijderd.
+	- Bug:xxx	- IBB: Id's verwijderd uit weergave in de lijsten behandelaren en rubrieken.
+	- Bug:xxx	- IBB: bij aanmaken van nieuwe fase wordt het FaseTypeId uit de tabel gehaald ipv hardcoded
+
+Wijziging 2.92
+	- Bug:xxx	- Voorbereiding mail
+	- Bug:xxx	- Voorbereiding SEPA
+	- Bug:541	- In clieop bestand naam NOV eruit gehaald.
+	- Bug:xxx	- Opslaan en toevoegen documenten aangepast. vanuit IBB worden ze nu opgeslagen in map "dossiernummer" en via relaties in map "relatie.id"
+	- Bug:xxx	- mogelijkheid tot printen van documenten direct vanuit het form in IBBdossier toegevoegd.
+
+Wijziging 2.91
+	- Bug:534	- Optie "concept" toegevoegd bij opslaan brief vanuit IBB
+				- optie maak definitief toegevoegd aan datagrid documenten
+	- Bug:532	- Overzicht lijst termijnen.
+	- Bug:535	- IBB BF nu ook in agenda behandelaar.Wel eerst de exchangeaccount toevoegen(kan via onderhoud)
+	- Bug:538	- mogelijkheid Verwijderen IBB dossier via relatiescherm toegevoegd.
+					Verwijderd OOK alle fase,griffiekosten en document records
+	- Bug:538	- Toevoegen documenten invoer controleren(Relatie en IBB). veld "onderwerp"(form en tabel) beperkt/opgerekt naar 100 chars
+	- Bug:531   - Zoeken in documenten. vult nu het zoekpad adhv systeeminstelling documentenpad
+	- Bug:536	- Storneringen worden niet gelogd. logging gebeurde alleen met wijzingen. nu ook bij nieuwe toevoegen.
+	
+Wijziging 2.90 
+	- Bug:529	IBB naam van de behandelaar in scherm
+	- Bug:530	IBB:IBB bezwaarfase auto. weken ( ook het terug rekenen naar weken bij ingevulde data)
+		Weekvelden bezwaar en ingebreke worden standaard gevuld met resp. 6 en 12 weken maar zijn te wijzigen. 
+		Wijzigen datum besluit (bij verlaten datum veld) berekend automatisch bezwaar – en ingebreke datum adhv (datum besluit  + weekvelden). 
+		Wijzigen weekvelden berekend automatisch bezwaar – en ingebreke datum adhv (datum besluit  + weekvelden). 
+		Opslaan bezwaarfase controleert of er al agenda-items zijn en zijn gewijzigd en vraagt dit te mogen aanpassen. 
+		Bij een nieuwe bezwaarfase wordt gevraagd om de agenda-items toe te voegen maar checks staan default uit. 
+	- IBB: mogelijkheid om griffiekosten in te voeren en koppelen aan dossier en fase toegevoegd.
+	- IBB: Diversen aanpassingen voor fase schermen en outlook agenda koppelingen
+	- NSK bestand voorlooprecord gecorrigeerd. wordt nu 1e dag vd huidige maand gezet.
+	- IBB: mogelijkheid om documenten te uploaden en koppelen aan relatie toegevoegd.
+	
+Wijziging v 2.8.0
+	IBB: Type:  vier types, Verzoek, Bezwaarfase, RB of CRVB gemaakt. volgens documentatie.
+	- Bug:527	- IBB: Beschrijving Outlook regel nu met naam jurist
+	- Bug:527	- IBB Main: dropdown brieven verwijderd uit het scherm.
+	- Bug:525	- IBB Dossiers hoofdscherm
+				Knop nieuw werk weer.(Was een verkeerde database table)
+				in de grid de lege (nieuwe) regel verwijderd
+				kan niet meer editen in de grid (wel readonly gemaakt.???)
+	- Bug:526	-IBB Documenten foutmelding bij toevoegen. opgelost
+	- Bug:508	-NSK IN-Uit niet meer dan 1 maand vooruit	
+		-"LastDayNSKDate <= LastDayCurrentMonth" is nu "LastDayNSKDate < LastDayCurrentMonth" (alleen bij afmelding NSKInOut = 2)
+
+
+Wijziging v 2.7.7
+	- Bug:521	- NSK verwerking met 1 nul missend 
+					'oude code "PadLeft" vervangen door een loop.
+					'Niets gevonden? Blijf het dan proberen met voorloop nullen tot 9 chr lang
+	- Bug:520	-Bij nieuwe relatie of gevonden in voorportaal geen verdere verwerking meer, alleen een melding in verslag.
+				-Deze melding niet meer geven als de persoon jonger is dan 24 jaar. 
+	- Bug:508	-NSK IN-Uit niet meer dan 1 maand vooruit
+			 'afmeldingen wegschrijven met de laatste dag van de vorige maand
+	- IBB outlook bug opgelost
+			Er wordt nu vanuit systeeminstelling het acccount voor de afspraken geladen.(secretariaat@mijnvbm.nl)
+			
+			
+Wijziging v 2.7.6
+	- Bug:516	- Documenten worden voortaan gelinkt op lidID, en niet meer op lidnummer.3
+					!!LETOP Update documententable met "Update_documents_lidId.sql" !!
+Wijziging v 2.7.5
+	- Bug:515	- Aanpassen NSK-inout aanpassen. Is nu instantie onafhakelijk en haalt nu alle records op die een nskinout waarde hebben. De rest van het process blijft hetzelfde.
+
+Wijziging v 2.7.4
+	- toevoeging belastingadviseur checkbox op relatiescherm, b_belastingadviseur in database en relatieobject tbv adviseurs op belastingsite.
+	- Bug:503	- Nieuw BBTV lid, xrcise ook op 1. fout bij opslaan opgelost.
+	- Bug in verwerking ABP file. 1e en laatste regel gaf foutmelding. opgelost door controle op code 00 en 99 uit te sluiten van verwerking
+
+Wijziging v 2.7.3
+	- BugId 512:bug in selectie functie onderdelen opgelost in mailing scherm.
+				Controle op "datum uit" bij selectie van Adviesgroep, Orgaan en Afdeling toegevoegd. was alleen bij functie.
+	- Bug in verwerking ABP file 'Zoeken naar lidnr aangepast. niet gevonden probeer het dan nog eens met voorloop nullen tot 9 lang
+	- Bug in wordMerge opgelost. Na het maken van een brief was de ribbon niet meer actief.
+	- In sjablonen onderhoudsscherm kan nu ook gekozen worden voor dtox en docx. 
+	- In sjablonen onderhoudsscherm probleem opgelost bij template locatie verificatie. 
+
+
+Wijziging v 2.7.2
+	- bug in mailing seleectie opgelost.
+	- Alle documenten worden voortaan opgeslagen met de standaard instelling van Word. 
+	   Voorheen werd er in de source afgedwongen dat het een .doc moest wezen. Windows search kon hierdoor deze documenten niet op inhoud indexeren. 
+
+Wijziging v 2.7.1
+	- Bug:501  - Overzicht 4. Goud. maand werd niet goed meegenomen in de query.
+	
+Wijziging v 2.7.0
+	- Bug:507  - Verwerking NSK leden met bedrag=0
+				Tijdens het verwerken worden leden met 0 bedrag verzameld. Deze worden navoltooiing op het scherm NSK Mutaties weergeven als tabel. 
+				Na een keuze van de instantie worden van deze leden het contributie instantie gewijzigd.
+				tevens wordt de datum in het veld sinds gezet en de vorige instantie gevuld met de oude.
+				Deze wijzigingen komen ook in de historytabel.
+				dmv het weghalen van het vinkje in het 1e veld kunnen er leden worden overgeslagen.
+	- Bug:501  - Overzicht 4. Goud kan nu ook met maand opgaven
+	- Bug:501  - Overzicht quickreports kan vervolgens nu ook worden geprint
+	- Bug:509  - quickmail - rapport instanties toegevoegd
+	- Bug:508  - NSK IN-Uit niet meer dan 1 maand vooruit
+	           - Add_Fields_v2.7.0.sql
+	           - NSK afmeldingen worden nu altijd verstuurd met de laatste dag van de huidige maand. 
+               - NSK aanmeldingen worden nu altijd verstuurd met de 1e dag van de huidige maand. 
+	
+Wijziging v 2.6.1
+	- Bug:501  - quickmail - spelddragers. bug opgelost. geeft nu selectie "IN" de periode ipv "TM"
+	
+Wijziging v 2.6.0
+	- Bug:504   - opgelost.  Rapport Wel in VBM en niet in ABP kijkt ook in historie
+	- Bug:505	- Mailingscherm selectie Bond aan de query 'Status = 0' toegevoegd,
+	- Bug:501  - via menu - verwerken - quickmail. kan er gekozen worden tussen de lijsten. en kunnen de criteria worden ingeluld waarna de resultaten verschijnen in het mailscherm.
+	- Bug:503  - Nieuw BBTV lid, xrcise ook op 1
+					-extra column xrcise(bit) bij table bonden
+					-bonden toegevoegd aan onderhoudsscherm
+					-Bij wijzigen van bond wordt hieraan gerefereerd en aantal op 1 /0 gezet
+	- Bug:504  - opglost. Rapport Wel in VBM en niet in ABP kijkt ook in historie. status <> 1 wordt nu gefilterd.
+
+Wijziging  v 2.5.1
+	- Bug:499  - kolom "afdeling" toegevoegd resultaat mailingoverzicht
+	- Bug:485  - Wijzigingen wachtwoord verhaspelen. De waardes van wachtwoorden in de history tabel zijn nu de niet meer leesbaar.
+	
+Wijziging  v 2.5.0
+	- Bug:440:NSK verwerking: niet meer alleen melden, maar dus ook gewoon de contributie afhandelen
+     aangevuld met 'behalve als het ingehouden bedrag 0 is dan toch maar weer niet
+	- Bug:440:NSK verwerking:Controleer of het plaatsing nummer al voorkomt in tabel plaatsing, zoniet wordt deze toegevoegd met als omschrijving "toegevoegd via NSK".
+    - Bug Mailing: probleem met vinden van sjabloon in sub map van standaard map opgelost
+    - Bug:471:Mailing scherm meerdere selecties nu mogelijk dmv van checkbox "toevoegen" aan te zetten. 
+              resultaten uit volgende selectie worden toegevoegd mits de relatie al in de resultaat aanwezig was.
+    
+Wijziging  v 2.4.3
+	- aanpassingen in leden InUit telling. telling totaal aantal leden was niet correct.
+	- aanpassing mailingscherm. net als bij relaties wordt de templates onderverdeelt in afdelingen.
+	
+Wijziging  v 2.4.2
+	- aanpassing contributie scherm. radiobutton starten -, stoppen - en negeren NSK toegevoegd. ipv checkbox NSK aanmelden.
+	- NSK verwerking: niet meer alleen melden, maar dus ook gewoon de contributie afhandelen
+	- NSK verwerking: Controle toegevoegd of de postcode in de laatste 6 maanden al een keer is aangepast.Het adres wordt dan niet nogmaals aangepast.
+	- Mailing - bij selectie van functie wordt nu ook gekeken op eindedatum functie
+	- BugID:418:Is een stored procedure flexible genoeg waarin de waarde van colomn "veld" als parameter wordt meegegeven.
+		Voorbeeld van de resultaten via het blok "admin"
+		run eerst de createstored.sql in bijlage van deze bug.
+
+
+Wijziging  v 2.4.1
+	- NSK verwerking: Verslag historie leden wordt WEER meegenomen.
+	- NSK verwerking: NSK afmelding worden nu alleen meegenomen in de InOut verslag als NSKDatum <= laatste dag huidige maand 
+	- bugid 413: Datum probleem invoer nieuw lid - het automatisch aanvullen van de datum seperator tijdens het invullen van een datumveld 
+	             is nu uitgezet.
+	             
+Wijziging  v 2.4.0
+	- bugid 436: NSK verwerking ook adressen verwerken
+					Mutaties van adressen worden nu ook in de historietabel weggeschreven.
+					Bij verslag van de niet gevonden adressen in pc tabel, wordt nu het volledige nieuwe adres meegegeven.
+	- bugid 345: Sjablonen afdeling afhankelijk maken (LETOP database aanpassing Add_Fields_v.2.3.7.sql)	
+	
+Wijziging  v 2.3.5
+	- bugid 436:Verslag NSK In/Uit:	Code 1e regel is nu 010 ipv 011
+									verslag overschrijft nu voortaan het oude textbestand ipv aanvullen.
+	- bugid 436:NSK verwerking ook adressen verwerken
+				Het NSK bestand mag het woonadres updaten in geval de postcode huisnummer <> aan de vastgelegde postcode huisnummer indien: 
+				- Het geen NAPO adres binnenland is (adresregel positie 61 bevat het woord NAPO) 
+				- Het geen NAPO adres buitenland is (adresregel positie 94 bevat het woord NAPO) 
+				- De postcode in het postcode bestand voorkomt. (Anders op de uitzonderinglijst printen) tenzij postcode leeg is (=buitenland), dan verwerken. 
+				- De update van de straat en plaatsnaam voor binnenlandse adressen moet uit het postcodebestand komen 
+				- LETOP!! Postcode bestand is oud en kan daardoor veel adressen niet vinden.
+
+Wijziging  v 2.3.3
+	- display verkeerde contributie waarden opgelost
+	- Bug 409 clieop: Clieop waardes controleren op lengte
+		              ipv alleen aanvullen tot opgegeven lengte wordt nu de waarde ook ingekort tot de opgegeven lengte
+	- button op ledenkaart toegevoegd tbv smsapp. Is alleen zichtbaar indien de smsapp in dezelfde dir staat.
+
+Wijziging  v 2.3.2
+	- Bug aanmaken Clieop: beperking bij selectie ander jaar dan huidige opgeheven.
+	
+Wijziging  v 2.3.1 (Add_Fields_v.2.3.sql)
+	- Bug opslaan word opgelost.
+	- bugid:352: nieuwe functie Nazorg overleden
+				nieuw tabblad nazorg toegevoegd.
+				
+Wijziging  v 2.2.0 (Add_Fields_v.2.2.sql)
+	- velden b_email, b_mobiel en b_telefoon toegevoegd aan table relaties(Add fields 2.2)
+
+Wijziging  v 2.1.2
+	- optimalisatie mailing/report processen
+	- bugid:351: Lijst overleden leden - mogelijkheid voor genereren van overzicht overledenen naar Word.
+	
+Wijziging  v 2.1.1
+- relatiezoekscherm:bugid:322: velden postcode/huis nummer omgedraaid tevens is huisnummer nu optioneel.
+- bugid 341: Stornering kan nu ook worden aangepast mits het nog niet is meegenomen met de batchfile
+- bugid 342: Uitbreiding mailgscherm: huidige afdeling combo hernoemd naar functe afdeling
+	     nieuwe combo afdeling toegevoegd voor selectie leden afdeling.
+
+Wijziging  v 2.1.0 (sql_update_v2.1.0)
+	- verzendbestand: bugid:306: ivm met ontbreken van huisnr in buitenlandse adressen is er besloten om column 'huisnr' te veranderen van Double naar varchar(10). 
+		Hiervoor is ook de software aangepast 
+	- bugid:319: foutieve weergave van telligingen in verslag opgelost.
+	- bugid:317: Bij foutieve invoer vaan storno of contributie komt er een melding/error.
+	- bugid:313:Integratie belastingservice in ledenapp
+	- relatiezoekscherm:bugid:316:bij zoeken op plaats is het veld "naam" is nu optioneel.Als deze leeg is wordt er gesorteerd op achternaam
+	
+Wijziging  v 2.0.0 (Add_Fields_v.2.0.sql,Zoek_dubb_ivm_voorloopnul.sql,Update_relatienr_voorloopnul.sql)
+	- Lidnummers hebben voortaan 9 chars bestaande uit huidig nummer aangevuld met 0.
+	- NSK verwerking: Volgorde lidnummer bij NSK verwerkings verslag aangepast. Verslag historie leden wordt niet meer meegenomen.
+	- relatiescherm: Vinkje BOM verplaatst en kopie op functieblad tbv rel_functies.
+	- relatiezoekscherm: Zoeken op plaatsnaam toegevoegd. Lijst is een weergaven van bestaande plaatsen uit de relatie tabel.
+	- relatiescherm:bugid 298: beheren functies mogelijk gemaakt voor rel_functies.
+	- relatiescherm:bugid 298:Nieuwe groep rel_readers_mailing. deze groep heeft toegang tot het mailingscherm.
+							De volgende groepen hebben nu toegang tot het mailingscherm. rel_admins,rel_users,rel_readers_mailing en rel_functies
+	- relatiescherm:bugid 310: invoeren van een stornering.
+	                          Tijdens het invoeren van een stornering wordt het ingevulde storno bedrag van de corresponderende maand afgehaald.
+	- uitbreiding op bugid 299:aanpassing database tbv Mailing NSK leden die geen contributie hebben betaald.
+	            veld LeeftijdCheck toegevoegd aan tabel lidsoorten. 
+	            tijdens de nsk verwerking wordt hier gekeken of de mailing status "m_nsk" moet worden aangezet als de lidleeftijd groter is dan de hier opgegeven leeftijd.
+	
+Wijziging  v 1.9.1
+	- verzendbestand: bugid:306: Bij het aanmaken van verzendbestanden wordt er geen 0 meer toegevoegd aan het huisnummer als 
+	                          deze op 0 staat(buitenlandse adressen).
+
+Wijziging  v 1.9.0 (sql script Add_Fields_v1.9.sql uitvoeren)
+	- relatiescherm: bugid:298:rel_functies toegevoegd. Zij kunnen via tabblad functie de checkbox wijzigingen opslaan en functies beheren.
+	- verwerking NSK:bugid 299:  Tijdens verwerking NSK, indien Wel in VBM en niet in NSK (of 00000000) 
+      And ((Indien burger actief en leeftijd > 57) or (Indien militair actief en leeftijd > 50)) 
+      Dan M_NSK op true zetten.
+    - mailingscherm:bugid 299:Selectie functie m_nsk toegevoegd.
+    - relatiescherm:bugid 303: opslaan via Ctrl+S alleen nog voor admins en users beschikbaar.
+    
+Wijziging  v 1.8.2
+	- relatiescherm: bugid:297:Vinkjes gedupliceerd naar functiekaart.
+    
+Wijziging  v 1.8.1
+	- relatiescherm: bugid:295:bij signalering Functie wordt geen functie omschrijving meer getoond.
+	- relatiescherm: bugid:294: Rapport print klantenkaart toegevoegd.
+	- relatiescherm: bugid 296: Keuze toegevoegd voor opslaan bij afsluiten.
+	- verwerking NSK:foutmelding bij , veld status opgelost
+	- verwerking NSK: als relatie niet wordt gevonden dan nog een poging met voorloopnullen
+	
+	
+Wijziging  v 1.8.0
+	- Bij het runnen van de cieop bestand wordt de gedraaide periode weggeschreven in systeem table 
+		en in de stornering tabel kolom "status" de tekst "meegenomen in batch 'jaar'-'periode'" LETOP!! dit geal tijdens de Controle run
+	- Mogelijkheid voor stornering toegevoegd. ( update_sql_v1.7.8.sql nodig)
+		via relatiekaart toevoegen - standaard gegevens zijn: huidige maand en jaar, contributiebedrag en teller op 1
+		gezocht wordt of er een storno was in de vorige periode, zoja wordt dit bedrag bij het contributiebedrag opgeteld en de teller
+		opgehoogd.
+		
+	- tellingen van de verslagen aangepast.
+		Ging fout omdat er diversen leden geen lidsoort hadden. Dit is opgevangen door een extra controle hierop. 
+		indien geen lidsoort wordt dan lidsoort "Z"(zonder lidsoort) toegekend in het verslag.
+	- (bugid:280) functies onderhoud via relatiekaart.
+			Dropdowns nu incl omschrijvingen.
+			Functie overzicht nu gesorteerd op soort
+			
+	- (bugid:279) verslag in/uit leden
+			verwijderd uit report: 1e kolom verslag.(was dubbel ivm wel of geen word table)
+		    toegevoegd aan report: Totale aantal leden op "einddatum verslag"
+            toegevoegd aan report: Totale aantal opzeggingen in jaar "jaar van verslag"
+
+Wijziging  v 1.7.7
+	- Bij verwerking van NSK bestand de history leden uit het verslag "Wel in VBM, Niet in NSK:" van onbehandelden leden gefilterd '
+			dus nog wel verslag van actieve - en voorportaal leden.
+	- (bugid:250)Clieop bestand aanmaken. er worden nu meerdere bestanden aangemaakt en gesplitst op het aantal opgegeven max transacties
+		Ook problemen met aparte karakters is opgelost.	
+	
+Wijziging  v 1.7.6
+	-(bugid:276) Aanmaken van meerdere nieuw contributie jaar aangepast.
+	
+Wijziging  v 1.7.5
+	- (bugid:250)Clieop bestand aanmaken.
+		Het aantal records is nu geregeld via systeeminstellingen tabel zoeknaam = "CLIEOP"
+		Er wordt op dit aantal gecontroleerd en genereerd foutmelding indien dit wordt overschreden.
+	- verwerken van ABP bestand toegevoegd.																																																		
+			als NSK maar zonder controles op km en rangen.ed.
+			nieuwe relaties worden ook niet toegevoegd vanwege te weinig gegevens, maar komt wel in verslag.
+	- (bugid:276) Aanmaken van meerdere nieuw contributie jaar aangepast.
+	- Readers nu ook toegang (alleen lezen) tot history leden.
+	- (bugid:278)De username is niet consistent. (bijv. in wijzigingen log)opgelost
+	- (bugid:275)WordMerge bestand nu zonder de laatste lege regel.
+	
+Wijziging  v 1.7.4
+	- Clieop: Melding transactie > 5000 uitgeremd
+	- Clieop: Extra controle bij Natres run. op instantie NSK
+				Als vinkje "VNR natres" = true dan controleren of er NSK bij instantie staat indien ja dan meenemen in het controle rapport
+				dus niet in de verwerking.
+	- Relatiescherm:(bugid:274): Status relatie werd niet bijgewerkt. Bij opzegging krijgt het de status historie
+					En bij het verwijderen geeft het de melding dat de status NIET automatisch wordt bijgewerkt.
+	- Relatiescherm:(bugid:272): Bij opstarten scherm wordt er (indien er geen huidig jaar is )contributie jaar aangemaakt, ook als al is opgezegd.
+	- Relatiescherm:(bugid:220): de sortering van functies bij "toevoegen functie" aangepast op ID sortering
+
+Wijziging  v 1.7.3
+	- Verslag in/Uitstroom bug opgelost. de opbouw van de table is nu dynamisch
+	- Default settings aangepast !! database is VBM!!
+	- mailingscherm:(BugId:268) Zoekfunctie op plaatsing toegevoegd.
+	- Relatiescherm:Functie toevoegen via de grid verwijderd, voortaan alleen via de button.
+	- Relatiescherm:(BugId:269) readers leden kunnen nu wel editten maar alle buttuns zijn nu disabled en 
+					dus ook de mogelijkheid om op te slaan. Er kunnen nog wel dcumenten worden beheerd.	
+	- Relatiescherm:(BugId:265)opgelost bij oproepen van documenten.				
+	- Relatiescherm: bij verwijderen van documenten wordt er eerst om een bevestiging gevraagd
+	- mailingscherm:(BugId:269)ook readers kunnen nu in het mailingscherm
+	- Aanmaken verzend bestand tbv Trivizier & Xrcise (bugid:266)
+	- Na wijzigingen van instellingen hoeft de applicatie niet meer opnieuwe te worden opgestart
+	- mailingscherm: Bij functieselecties adviesgroepen toegevoegd.
+	- Relatiescherm: label "Aantal Xrr" gewijzigd in "Aantal XR"
+
+	
+Wijziging  v 1.7.2
+	-Onderhoud functies:(bugid:261)onderhoud functies aangepast.
+		+ Toevoegen (via knop nieuw) voortaan via een dialogscherm
+		+ wijzigen (via dubbel klik op regel) voortaan via een dialogscherm
+		+ verwijderen via selectie regel en Del toets
+		+ nieuw Id = max id +1 toegevoegd.
+	- Relatiescherm:(bugid:261)overzicht functies worden nu vernieuwd na wijziging en/of toevoeging
+	- Relatiescherm:(bugid:262)menu "file-new" aangepast.
+		+ heet nu "nieuwe relatie" , na klikken wordt het nieuwe relatie scherm getoond
+	
+Wijziging  v 1.7.1
+	- NSk verwerking:korting bedrag (mBedrag)  aangepast
+            If ContributieAmount = NSKAmount Then
+                'Controleer het verwachte bedrag tegen het opgegeven bedrag.
+                'ok, ga dan verder
+            ElseIf (ContributieAmount - DiscountAmount) = NSKAmount Then
+                'Controleer het verwachte bedrag - kortingbedrag tegen het opgegeven bedrag.
+                'ok, ga dan verder
+            Else
+                'als geen van bovenstaande klopt dan ook een melding wegschrijven en ga ook verder
+                sbAberrations.Append("lidnr: " & myRelatie.lidnr & " ;verwachtte bedrag: " & ContributieAmount & " ;NSK bedrag: " & NSKAmount & vbCrLf)
+            End If
+	- Relatiescherm:(bugid:259)Op de correspondentie en storneringen tab lidid en id verwijderd
+	- Relatiescherm:(bugid:259)tabblad indeling verwijderd
+	- Mailingscherm:(bugid:259)kolom lidnr veranderdt in medewerker
+	- Relatiescherm:(bugid:259)Op de contributietab de kolommen sedert en ID verwijderd
+	- Mailingscherm:(bugid:247)selectie keuze uitgebreid met functie,orgaan,afdeling + ingangsdatum functie
+	- Tevens moet de "eindedatum relatie" nu groter zijn dan vandaag of leeg.
+
+Wijzigingen v.1.7.0 (sql script Add_Fields_v1.7.sql uitvoeren)
+	- NSK Aan-/afmelding:(BugId:251)    
+		+ tbl relaties veld NSKInOut toevoegen type int (0= niets,1= aanmelding,2=afmelding)
+		+ tbl relaties veld NSKDatum toevoegen type datetime
+		Q =   "WHERE InstantieID = @InstantieID AND NSKInOut > 0"
+		Aanmelden NSk gaat dan via het lidsoort scherm
+		Afmelden NSK gaat dmv knop eindedatum scherm - NSK krijgt automatisch(wel wijzigbaar) de waarde van de opzegdatum.
+		In de NSK file worden deze dan meegenomen in de eerstvolgende runmet de ingevulde datum.
+		Na de run wordt er gevraagd om deze waardes dan weer te resetten (leeg te maken) zodat ze niet de volgende keer weer worden meegenomen.
+	- Correspondentie:(BugId:249)
+		+ Voortaan de keuze ja en opslaan, ja niet opslaan en nee(cancel). 
+		+ Mogelijkheid toegevoegd om documenten te verwijderen(zowel doc als database ref) via correspondentieTabblad
+		+ Extra velden aan merge.txt toegevoegd. AanmaakDatum;DocNaam
+	- Clieop: (BugId:250): Alleen relaties met Bank Instantie wordt nu meegenomen in de verzameling
+		+ Aanpassing Batch sluitrecord is 9999A00 > is 9990A00
+		+ Aanpassing Vaste omschrijving record aangepast naar 0020AContributie VBM/NOV 20xx-xx 
+		+ Controle op aantal Batchrecords niet de 5000 overschrijdt
+	- Relatiescherm:(bugid:248) :Het veld status wordt alleen weergegeven indien admin 
+		+ De waarden moeten zijn: Actieve leden Leden voorportaal Leden historie 
+	- functietoevoegscherm:(bugid:245) Vakje "Tonen op relatiekaart" toegevoegd
+		+ Standaard afdeling is nu "geen afdeling"
+		+ tbl functies veld toon toevoegen type bit
+		+ Als het veld "Tonen op relatiekaart" wordt aangezet, worden de andere functies op uit gezet.
+		+ Relatie kan nu meerdere functies gelijkktijdig hebben en alleen met de optie "toon" komt op NAW scherm gesignaleerd.
+		+ Foutmeldingen bij Functies zonder datumin en\of uit worden nu afgevangen en gezien als actuele een functie
+	- Onderhoud functies: (bugid:246)
+		+ Bij het aanmaken van een nieuwe functie moet eerst de functie worden ingevuld en daarna pas de kleur toekennen. Indien andersom wordt daar nu een melding van gegeven.
+		+ Verwijderen van functie gaf ook fouten. deze zijn ook opgelost en wordt direct opgeslagen.
+	- Relatiescherm:(bugid:244) Extra controle bijinvoeren registratie nummer,bijvoorbeeld 99900011(gratis lid) is geen geboortedatum dus dan niet het veld gebdatum invullen.
+	- Lidsoort Fase systeem:
+		+ tbl lidsoorten veld Fase type bit toevoegen
+		+ tbl relaties veld Fase type int toevoegen
+		+ Relatiescherm: Als Huidig lidsoort een Fasesoort is worden de fase opties 123 zichtbaar
+					bij wijzigingen van lidsoort is er controle op of huidiglidsoort een fasesoort is indien niet wordt de Fase op 0 gezet
+		
+	- Relatiescherm: label/checkbox "(DAP) Defensie aanvullings plan" weer vewijderd.
+	- Relatiescherm: label/veld "Origine" verwijderd.
+	- relatie-/mailingscherm: label lidnr veranderd naar werknemernr 
+	- mailingscherm: volgorde Rangen aangepast
+	- mailingscherm: mogelijkheid mailing voortijdig te stoppen/annuleren? na starten veranderd de reset button in een cancel button
+	- relatie-/mailingscherm: ALV veranderd in AV. 
+	- onderhoudscherm: BUG: id velden waren readonly. dit is nu gewijzigd waar de Id geen autonummering heeft.
+	- Verwerking NSK bestand:
+		+ Toegevoegd verslag InUit leden 
+
+
+Wijzigingen v.1.6.2
+	- Verwerking NSK bestand:
+		+ gevonden Lidnrs in History en voorportaal worden alleen in het verslag verwerkt.
+		+ In v 1.6.1 werden de contributie nog niet verwekt,nu dus weer wel
+		
+Wijzigingen v.1.6.1
+	- Foutafhandeling bij afbreken van word documenten processen
+	- Aanpassing volgorde lidsoorten is nu gelijk aan de oude app.(LET OP DATABASE WIJZIGING NODIG! Via conversie tool)
+	- Verslag In-Uitstroom (!!! wel lidsooorten en km maar ik heb geen categorien ter beschikking zoals in voorbeeld!!!)
+	- relatiescherm: Als het een nieuwe lid betreft kunnen er geen contributie gegevens worden ingevuld
+		+ Er wordt er nu gevraagd om de gegevens op te slaan. daarna worden de gevens wel zichtbaar. 
+	- Aanmaken Clieop : er worden nu ook versienummer per maand bijgehouden en verwerkt in de bestandsnaam.(LET OP DATABASE WIJZIGING NODIG!)
+	- Aanmaken Clieop bestand
+	- Aanmaken Clieop testrun
+	- relatiescherm: aantal posities voor lidnr/Werknemernummer op 9 gezet.
+	- relatiescherm: BUG: opgelost: datumvelden werden niet geupdate??
+	- relatiescherm: BUG: Na invoer registratienummer automatisch geboortedatum invullen... = YYMMDDxxx 
+		+ Het jaartal werd aangevuld met het jaar 2000. dit is nu 1900
+	- relatiescherm: Bij invullen van pc wordt er na 4 char een spatie aangegevuld.(maar moest dit niet buitenland compliant zijn als dat niet zo is zet ik er liever een masker op)
+
+
+Wijzigingen v.1.6
+	- NSK verwerking: 
+		+ Als relatie niet wordt gevonden en lidnr eindigd op 01 probeer het dan nog eens maar dan eindigend met 00.
+			Als de realtie dan wel wordt gevonden, wordt er alleen een melding in het verslag weggeschreven.
+		+ Als ingehouden bedrag 0 is, dan record wordt het record overgeslagen.
+	- Relatiescherm: BUG opgelost: er werd ten onrechte(als lid Admins)gecontroleerd of lidnummer al bestaat terwijl het niets werd gewijzigd.
+	- Relatiescherm: Admins hebben nu rechten om het lidnr te wijzigen.
+	- invoer/wijzig scherm lidsoort: velden "contributie oud", "korting nu" en "korting oud" verwijderd.
+	- Relatiescherm: Bij beeindiging wordt de status (als reden is "OVERLEDEN") op 1 (= oudleden) gezet.
+		+ Dit werd al gedaan tijdens opslaan (v1.5) maar wordt nu ook visueel zichtbaar in de status combbox
+	- invoer/wijzig scherm functies: is ingangsdatum verplicht
+	- Relatiescherm: BUG: mogelijkheid verwijderen functies opgelost
+	- Relatiescherm: tabvolgorde aangepast
+	- Relatiescherm: Dienstvak weergave gesorteerd op nummer 
+	- Aanmaken nieuwe relatie wordt aantal trivizier op 1 gezet
+	- Relatiescherm: Na invoer registratienummer automatisch geboortedatum invullen... = YYMMDDxxx 
+		+ dit gebeurd alleen als geb.datum nog leeg is.
+	- Relatiescherm: De tabbladen Indeling en Lidmaatschap samengevoegd op Lidmaatschap. 
+	- Relatiescherm: Label NATO is nu NATO/Paresto 
+	- Relatiescherm: Voorletters, Plaats en land in hoofdletters
+	- Relatiescherm: Tabblad Lidmaatschap: Instanties zonder nummer weergeven.
+	- Relatiescherm: Tabblad Lidmaatschap: "huidig Lidsoort" wordt naast ingangsdatum getoond
+
+Wijzigingen v.1.5.1
+	- Standaard config file voor VBMNOV bij eerste gebruik.
+	- NSK verwerking: afvangen verkeerde invoer maand
+	- Print icons geactiveerd geven nu een screendump van huidig scherm.
+	- Relatie zoekscherm: Mogelijkheid zoeken op huisnr/postcode combinatie toegevoegd.
+		
+Wijzigingen v.1.5
+	- Onderhoudscherm: bug. Functies knop kleur bepalen werkte niet.
+	- Relatiescherm: bug. overzicht verzekeringen stond niet goed
+	- Relatiescherm: Signalering bij wijziging van reden opzegging naar "OVERLEDEN" en persoon is spelddrager(erelid of lid v. verdienste)
+	- Relatiescherm: Bij beeindiging wordt de status op 1 (= oudleden) gezet.
+
+Wijzigingen v.1.4
+	- Relatiescherm: mogelijkheid voor toevoegen van soort verzekering en verzekeraar.
+	- mailingscherm: BOM Lid van MC
+	- Relatiescherm: DAP Defensie aanvullings plan 
+	- Relatiescherm: BOM Lid van medezegenschapsraad
+	- Relatiescherm: Tankpas 
+	- Relatiescherm: Samenlevingscontract 
+	- Relatiescherm: Cadeau ontvangen / welk cadeau : Datum + tekstveld
+	- mailingscherm: Datum velden goud/zilver veranderd naar checkbox
+	- mailingscherm: Datum veld flo pen toegevoegd.
+	- mailingscherm: checkboxen erelid & lid van verdienste toegevoegd.
+	- mailingscherm: Veld "Naam" heeft vaste positie 
+	- registratienummer in zoekresultaten toegevoegd.
+	- kan nu ook zoeken op bankrekening nummer.
+	- knop email bij veld email en emailwerk
+		+ tevens validatie emailadres tijdens invullen en verzenden toegevoegd
+	- selectie veld voor brieven vergroot.
+	- functie registratie 
+		+	Tabellen functies,fSoort,fadvies,forgaan,fadvies toegevoegd.
+		+	Tabblad toegevoegd met lijst functies v/d persoon.
+		+	Dialoog scherm v. toevoegen,wijzigen en verwijderen.
+		+	Functie signalering op relatie scherm.
+		+	Tabel functie onderhoud met kleur aanwijzing.
+
+Wijzigingen v.1.3
+	- Toevoegen NATO checkbox
+		+ toevoegen aan table relaties "ALTER TABLE relaties ADD [NATO] [bit] NOT NULL DEFAULT ((0)) "
+		+ checkbox NATO toegevoegd aan relatie scherm
+		+ checkbox NATO toegevoegd aan mailing selectie scherm
+	- IBB dossiers brieven maken toegevoegd. 
+		+ Alle velden van IBB en van de relatie zijn beschikbaar in de template
+	- IBB dossiers datum velden aangepast als bij relaties 
+		+ ( en dus ook de datetime class objecten 
+		+ Als de table dus niet leeg is alle standaard waarde in de datum velden op NULL zetten)
+		+ voor Q "zie Update Datum velden naar NULL.txt"
+	- IBB dossiers controle op wijzigingen ivm history
+	- IBB dossiers controle bij opslaan op dossiernr en lidid
+	- Wijzigingen van actieve venster opslaan dmv CRTL+S ("frmRelatie" en "frmIBBDossier" )
+	- Verslag van leden verdeling.
+		+ !!Deze is nog niet compleet. dit ivm ontbreken van niet complete inhoud relaties waar door er niet getest kan worden.
+		+ ?? Graag info over de samenstellingen van de groepverdelingen.
+	- Afdeling wordt automatisch aangepast na verlaten van ingevulde postcodeveld
+		+ Table "Afdeling_Postcode" toevoegen.
+	- NSK afhandeling aangepast.(zie story so far)
+	- Instanties aangepast
+		+ In de relaties table 3 velden toegevoegd (InstantieId, InstantieDatum en InstantieIdVorig)
+		+ (zie Add_Instantie.sql)
+	- relatie combo Status toegevoegd (0;actief,1;non-actief(‘oud’leden),2;voorportaal)
+		+ In de relaties table 1 veld toegevoegd (status)
+		+ deze kunnen alleen worden een rel_admins worden benaderd en gewijzigd.
+	- Toegevoegd aan hoofdscherm - Openen van leden history(non-actief) en leden voorportaal
+	- Melding "ok dan" verwijderd ;-) bij het maken van een document.
+	- Probleem opgelost als tijdens afsluiten v/d relatieform de controle op wijzigingen fout gaat.
+		+ Geeft nog wel de melding maar sluit dan wel af.
+	- Controle op DBNULL <> int64 opgevangen.	
+		
+Wijzigingen v.1.2
+	- Rangen en standen comboboxen aangepast.
+		+ Geen code als er nog niets is toegekend.
+		+ in de database de tabellen aanpassen. alle 0 waardes verwijderen en eventueel een code toevoegen voor bewust gekozen code als nvt.
+		+ op de selectie tabellen primarykey zetten ivm fout melding in onderhoudsscherm
+	- Bankrek waarde aangepast naar int64 (in tabel = bigint)
+	- Postcode zoeken aangepast. Zoeken op oneven nummers werkte niet.
+	 
+Wijzigingen na v.1.0
+    - Melding bij niet gevonden systeeminstellingen 
+	- mogelijkheid template selectie in Mailing
+	- controle op het bestaan van de template bij mailing of brief
+	- Templates zijn nu extentie onafhankelijk 
+	- Wijzigingen in de template tabel worden nu direct opgeslagen.
+	- Datum velden in relatiescherm aangepast.
+	  + Ze zijn nu standaard leeg en kunnen ook leeggemaakt worden
+	  + Er wordt gevalideerd op correcte invoer (dd-MM-yyyy) na verlaten veld.
+
+	- Database aanpassing relatie.achternaam verhogen naar varchar(100)
+	- veld achternaam op relatiescherm vergroot
+	- zoeken relaties uitgebreid
+	  + bug opgelost naam/postcode.
+	  + er kan nu ook gezocht worden op regnr.
+	  + er kan nu ook gezocht worden op postcode alleen.
+	- Bij aanmaken nieuwe relatie Ingangsdatum automatisch op dag van invoeren.
+	- op relatiescherm Label lid_natres aangepast naar VNR natres.
+	- Postcode tabel toegevoegd. nu mogelijkheid voor zoeken/aanvullen van adresgegevens op basis van postcode(en huisnr).
+	- Rangen en standen comboboxen aangepast.
+		+ er kan nu een code invuld worden of dmv de combobox een keuzen worden gemaakt
+		+ validatie code na verlaten textveld.

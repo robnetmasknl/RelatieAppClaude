@@ -1,0 +1,69 @@
+﻿Wijzigingen versie 5.3.0.10
+- bugid 1730: De dummies worden alleen gecontroleerd indien de checkbox is aangevinkt. Zodra er 1 boeking is met een dummie dan is het True en geeft het een andere kleur.
+
+
+Wijzigingen versie 5.0.0.1
+- bugid 1116: In de leden kaart kan nu ook worden gezocht op alleen postcode al dan niet met huisnr.
+
+
+
+Wijzigingen versie 5.0.0.1
+- bugid 1116: In de leden kaart kan nu ook worden gezocht op alleen postcode al dan niet met huisnr.
+
+Wijzigingen versie 4.0.0.3
+- bugid 1029: Lastchangedate tbv ongewenst overschrijven doorgevoerd in de belasting app.
+
+
+Wijzigingen versie 4.0.0.2
+- bugid 1027: optie toegevoegd in menu balk. Dialoogscherm om adviseur te selecteren. gecontroleerd wordt of de nieuwe adviseur al ergens is ingedeeld.
+
+
+Wijzigingen versie
+	- toevoeging b_belastingadviseur
+	
+Wijzigingen versie 1.8.3
+	- Bevestingsbrief via boekingen scherm en ledenascherm zoekt nu ook naar de	"BevestigingTemplate" via systeeminstellingen.
+	- Bug in wordMerge opgelost. Na het maken van een brief was de ribbon niet meer actief
+	
+Wijzigingen versie 1.8.2
+	- bugid 345: Sjablonen afdeling afhankelijk maken (LETOP database aanpassing Add_Fields_v.2.3.7.sql)
+	
+Wijzigingen versie 1.8.1
+	- bugid:353: relatie velden email, mobiel en telefoon op readonly gezet.
+	- bugid:355: Bevestigsbrief zoekt nu de locatiepad adh van de record id 1 in de templates-table
+				 extra locatie gegevens worden in de mailing.txt kunnen worden gebruikt address1,-2 en -3
+	- Aboutbox geeft nu ook de versies aan van de verschillende dll's
+	
+Wijzigingen versie 1.8.0
+	- bugid:353: toevoeging nieuwe velden b_email, b_mobiel en b_telefoon.
+	- bugid:350: foutmelding zoeken op lidnummer opgelost
+	- bugid:343: Uitbreiding lokatie adresvelden ook in de meldingen van web en mail.
+	
+Wijzigingen versie 1.x.x
+	- Bij invoer nieuw relatie krijgt het status = 3
+	- Bij opslaan relatie controle op: ouder dan 100 en jonger dan 15 jaar
+	                                   email adres aanwezig
+	                                   mobielnummer aanwezig
+	- Op relatiescherm knop voor postcode check toegevoegd.
+	- zoek queries uitgebreid met status = 3 of 0
+	- bugid:338:invoer lid geeft invalid object name “leden” opgelost
+				Tabvolgorde invoer ledenscherm gecorrigeerd 
+				Zoeken op lidnr, is nu wildcard? Dus zoek op 99900901 vindt ook 099900901 
+
+	
+Wijzigingen versie 1.7.0. released:29-09-2011
+	- bugid:313:Integratie belastingservice in ledenapp
+
+Wijzigingen versie 1.6
+	- Bug opgelost: Bij boekingen naar word werd de laatste boeking niet meegenomen.
+	- Bug opgelost: Bij boekingen naar txt werd niet gevraagd naar een opslag locatie.
+	
+Wijzigingen versie 1.5
+	- Mogelijkheid om lijsten met alle afspraken te generen naar diversen apps.
+		+ naar 1 txt bestand
+		+ naar 1 Excel (!! werkt alleen met excel 2007)
+		+ naar Word. per (locatie + datum) een nieuw document. Bij starten wordt gevraagd naar de opslag map.
+			
+Wijzigingen in versie 1.4
+	- Mogelijkheid om lijst uit te draaien mat alle afspraken.
+		+ Gaat nu nog naar zowel Excel als naar txt.
