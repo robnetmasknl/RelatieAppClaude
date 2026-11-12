@@ -102,6 +102,12 @@ Public Module GraphService
             Throw New GraphNotFoundException($"Graph 404 op '{context}': {body}")
         End If
 
+        'Een id dat Graph niet kan parsen (bv. een oude hex-EntryId uit het EWS/Outlook-tijdperk) geeft
+        'geen 404 maar 400 ErrorInvalidIdMalformed. Functioneel is dat hetzelfde: het item is niet vindbaar.
+        If resp.StatusCode = HttpStatusCode.BadRequest AndAlso body.IndexOf("ErrorInvalidIdMalformed", StringComparison.OrdinalIgnoreCase) >= 0 Then
+            Throw New GraphNotFoundException($"Graph ongeldig id (400) op '{context}': {body}")
+        End If
+
         Throw New GraphRequestException(resp.StatusCode, $"Graph fout ({CInt(resp.StatusCode)}) op '{context}': {body}")
     End Function
 
